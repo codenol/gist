@@ -1,0 +1,288 @@
+/**
+ * Design Tokens - Идеальная система токенов
+ * Автоматически сгенерировано из design-tokens.json
+ * 
+ * ВАЖНО: Не редактировать вручную! Изменения вносятся в JSON файл.
+ * 
+ * Этот файл содержит CSS переменные для идеальной системы токенов.
+ * Используйте эти переменные в stories и компонентах.
+ */
+
+:root {
+  /* ============================================
+     SPACING TOKENS - Примитивы
+     ============================================ */
+  
+  /**
+   * Минимальные зазоры (2px)
+   * Используется для: тонкие разделители, минимальные отступы
+   */
+  --spacing-primitive-50: 2px;
+  
+  /**
+   * Очень маленькие отступы (4px)
+   * Используется для: плотные группы элементов, маленькие gap между иконками
+   */
+  --spacing-primitive-100: 4px;
+  
+  /**
+   * Маленькие отступы (8px)
+   * Базовый отступ для большинства случаев
+   */
+  --spacing-primitive-200: 8px;
+  
+  /**
+   * Средние отступы (12px)
+   * Используется для: горизонтальный padding в полях ввода, gap между элементами в контейнерах
+   */
+  --spacing-primitive-300: 12px;
+  
+  /**
+   * Стандартные отступы (16px)
+   * Используется для: горизонтальный padding в кнопках, padding контейнеров и карточек
+   */
+  --spacing-primitive-400: 16px;
+  
+  /**
+   * Крупные отступы (20px)
+   * Используется для: padding в крупных контейнерах, отступы между секциями
+   */
+  --spacing-primitive-500: 20px;
+  
+  /**
+   * Очень крупные отступы (24px)
+   * Используется для: отступы между крупными блоками, padding в больших модальных окнах
+   */
+  --spacing-primitive-600: 24px;
+  
+  /**
+   * Максимальные отступы (28px)
+   * Используется для: максимальные отступы между крупными блоками
+   */
+  --spacing-primitive-700: 28px;
+  
+  /* ============================================
+     SPACING TOKENS - Семантические
+     ============================================ */
+  
+  /**
+   * Горизонтальный padding для интерактивных элементов (16px)
+   * Используется для: кнопки, ссылки, табы
+   * Основан на: spacing.primitives.400
+   */
+  --spacing-semantic-interactive-padding-x: var(--spacing-primitive-400);
+  
+  /**
+   * Вертикальный padding для интерактивных элементов (8px)
+   * Используется для: кнопки, ссылки, табы
+   * Основан на: spacing.primitives.200
+   */
+  --spacing-semantic-interactive-padding-y: var(--spacing-primitive-200);
+  
+  /**
+   * Отступ между элементами в интерактивных группах (8px)
+   * Используется для: gap между кнопками, gap между иконкой и текстом
+   * Основан на: spacing.primitives.200
+   */
+  --spacing-semantic-interactive-gap: var(--spacing-primitive-200);
+  
+  /**
+   * Горизонтальный padding для полей ввода (12px)
+   * Используется для: input, textarea, select
+   * Основан на: spacing.primitives.300
+   */
+  --spacing-semantic-field-padding-x: var(--spacing-primitive-300);
+  
+  /**
+   * Вертикальный padding для полей ввода (8px)
+   * Используется для: input, textarea, select
+   * Основан на: spacing.primitives.200
+   */
+  --spacing-semantic-field-padding-y: var(--spacing-primitive-200);
+  
+  /**
+   * Внутренний отступ контейнеров и карточек (16px)
+   * Используется для: карточки, панели, модальные окна
+   * Основан на: spacing.primitives.400
+   */
+  --spacing-semantic-container-padding: var(--spacing-primitive-400);
+  
+  /**
+   * Отступ между элементами в контейнерах (12px)
+   * Используется для: gap между элементами в карточках, gap между полями в формах
+   * Основан на: spacing.primitives.300
+   */
+  --spacing-semantic-container-gap: var(--spacing-primitive-300);
+  
+  /* ============================================
+     RADIUS TOKENS - Примитивы
+     ============================================ */
+  
+  /**
+   * Минимальное скругление (4px)
+   * Используется для: маленькие элементы, иконки
+   */
+  --radius-primitive-xs: 4px;
+  
+  /**
+   * Маленькое скругление (6px)
+   * Используется для: маленькие кнопки, маленькие карточки
+   */
+  --radius-primitive-s: 6px;
+  
+  /**
+   * Среднее скругление (8px)
+   * Базовое скругление для большинства элементов
+   */
+  --radius-primitive-m: 8px;
+  
+  /**
+   * Большое скругление (10px)
+   * Используется для: крупные карточки, большие панели
+   */
+  --radius-primitive-l: 10px;
+  
+  /**
+   * Очень большое скругление (12px)
+   * Используется для: поля ввода, крупные карточки
+   */
+  --radius-primitive-xl: 12px;
+  
+  /**
+   * Полное скругление (круг)
+   * Используется для: аватары, круглые кнопки, круглые бейджи
+   */
+  --radius-primitive-full: 999px;
+  
+  /* ============================================
+     RADIUS TOKENS - Семантические
+     ============================================ */
+  
+  /**
+   * Скругление для интерактивных элементов (8px)
+   * Используется для: кнопки, ссылки, табы
+   * Основан на: radius.primitives.m
+   */
+  --radius-semantic-interactive-default: var(--radius-primitive-m);
+  
+  /**
+   * Скругление для полей ввода (12px)
+   * Используется для: input, textarea, select
+   * Основан на: radius.primitives.xl
+   */
+  --radius-semantic-field-default: var(--radius-primitive-xl);
+  
+  /**
+   * Скругление для поверхностей (8px)
+   * Используется для: карточки, панели, модальные окна
+   * Основан на: radius.primitives.m
+   */
+  --radius-semantic-surface-default: var(--radius-primitive-m);
+  
+  /**
+   * Большое скругление для поверхностей (10px)
+   * Используется для: крупные карточки, большие панели, модальные окна
+   * Основан на: radius.primitives.l
+   */
+  --radius-semantic-surface-large: var(--radius-primitive-l);
+  
+  /* ============================================
+     COLOR TOKENS - Примитивы
+     ============================================ */
+  
+  /**
+   * Accent цвета (brand color - Java/Teal)
+   */
+  --color-primitive-accent-500: #00BEC8;
+  --color-primitive-accent-600: #13a3a9;
+  --color-primitive-accent-700: #128c90;
+  
+  /**
+   * Нейтральные цвета
+   */
+  --color-primitive-neutral-50: #f8f9fb;
+  --color-primitive-neutral-100: #eef1f5;
+  --color-primitive-neutral-300: #d5d9de;
+  --color-primitive-neutral-600: #8d8f95;
+  --color-primitive-neutral-900: #232425;
+  --color-primitive-neutral-white: #ffffff;
+  
+  /**
+   * Цвета ошибок
+   */
+  --color-primitive-error-500: #e53334;
+  --color-primitive-error-600: #d41f20;
+  
+  /* ============================================
+     COLOR TOKENS - Семантические
+     ============================================ */
+  
+  /**
+   * Interactive Accent цвета
+   */
+  --color-semantic-interactive-accent-default: var(--color-primitive-accent-500);
+  --color-semantic-interactive-accent-hover: var(--color-primitive-accent-600);
+  --color-semantic-interactive-accent-press: var(--color-primitive-accent-700);
+  --color-semantic-interactive-accent-focus-ring: var(--color-primitive-accent-500);
+  --color-semantic-interactive-accent-disabled: var(--color-primitive-neutral-300);
+  
+  /**
+   * Interactive Danger цвета
+   */
+  --color-semantic-interactive-danger-default: var(--color-primitive-error-500);
+  --color-semantic-interactive-danger-hover: var(--color-primitive-error-600);
+  
+  /**
+   * Surface Interactive цвета
+   */
+  --color-semantic-surface-interactive-default: var(--color-primitive-neutral-white);
+  --color-semantic-surface-interactive-hover: var(--color-primitive-neutral-50);
+  --color-semantic-surface-interactive-disabled: var(--color-primitive-neutral-100);
+  
+  /**
+   * Border Interactive цвета
+   */
+  --color-semantic-border-interactive-default: var(--color-primitive-neutral-300);
+  --color-semantic-border-interactive-hover: var(--color-primitive-accent-500);
+  --color-semantic-border-interactive-focus: var(--color-primitive-accent-500);
+  --color-semantic-border-interactive-error: var(--color-primitive-error-500);
+  
+  /**
+   * Text цвета
+   */
+  --color-semantic-text-on-accent: var(--color-primitive-neutral-white);
+  --color-semantic-text-on-surface: var(--color-primitive-neutral-900);
+  --color-semantic-text-on-surface-secondary: var(--color-primitive-neutral-600);
+  --color-semantic-text-on-surface-disabled: var(--color-primitive-neutral-300);
+  
+  /* ============================================
+     TYPOGRAPHY TOKENS
+     ============================================ */
+  
+  /**
+   * Font Size
+   */
+  --font-size-xs: 10px;
+  --font-size-s: 12px;
+  --font-size-m: 14px;
+  --font-size-l: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  
+  /**
+   * Font Weight
+   */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /**
+   * Line Height
+   */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+}
+
