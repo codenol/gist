@@ -146,3 +146,145 @@
 - [Подход по иерархии](hierarchy.md)
 - [Подход по контексту](context.md)
 
+## Тест: Проверь свои знания
+
+### Вопрос 1
+При подходе по функциональности, какой семантический токен нужно использовать для фона primary кнопки?
+
+a) `semantic_functional.color.background.primary`  
+b) `semantic_functional.color.action.primary`  
+c) `semantic_functional.color.brand.primary`  
+d) `semantic_functional.color.level_1.action`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Primary кнопка — это действие, поэтому используется `color.action.primary`. Фон primary кнопки — это не просто фон, а действие, которое пользователь может выполнить.
+</details>
+
+### Вопрос 2
+При подходе по ролям, какой токен используется для текста на primary кнопке?
+
+a) `semantic_roles.color.neutral.text_primary`  
+b) `semantic_roles.color.brand.primary`  
+c) `semantic_roles.color.surface.primary`  
+d) `semantic_roles.color.interactive.default`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+Текст на primary кнопке — это белый цвет, который в подходе по ролям относится к поверхности (`surface.primary`). Это поверхность, которая находится поверх брендового цвета.
+</details>
+
+### Вопрос 3
+При подходе по иерархии, какой уровень используется для disabled состояния кнопки?
+
+a) `level_1`  
+b) `level_2`  
+c) `level_3`  
+d) `level_0`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+Disabled состояние — это наименее важный элемент в интерфейсе, поэтому используется `level_3`. Это приглушенный, неактивный элемент.
+</details>
+
+### Вопрос 4
+При контекстном подходе, на что ссылается токен `button.primary.background.default`?
+
+a) `{semantic_functional.color.action.primary}`  
+b) `{semantic_roles.color.brand.primary}`  
+c) `{base.color.blue.500}`  
+d) `{semantic_hierarchy.color.level_1.action}`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+При контекстном подходе семантический слой не используется. Компонентные токены ссылаются напрямую на базовый слой: `{base.color.blue.500}`.
+</details>
+
+### Вопрос 5
+Какой подход лучше всего подходит для White Label решений?
+
+a) Функциональность  
+b) Роли  
+c) Иерархия  
+d) Контекст
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Подход по ролям идеально подходит для White Label, потому что роли остаются неизменными, а значения меняются. Например, `brand.primary` может быть синим для одного бренда и зеленым для другого, но роль остается той же.
+</details>
+
+### Вопрос 6
+При подходе по функциональности, какой токен используется для фона secondary кнопки?
+
+a) `semantic_functional.color.action.secondary`  
+b) `semantic_functional.color.background.secondary`  
+c) `semantic_functional.color.surface.secondary`  
+d) `semantic_functional.color.neutral.secondary`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Secondary кнопка — это фон, поэтому используется `color.background.secondary`. В отличие от primary кнопки, которая является действием, secondary кнопка — это фоновая поверхность.
+</details>
+
+### Вопрос 7
+Сколько состояний имеет кнопка?
+
+a) 2 (default, hover)  
+b) 3 (default, hover, active)  
+c) 4 (default, hover, active, disabled)  
+d) 5 (default, hover, active, disabled, focus)
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+Кнопка имеет 4 состояния: default (обычное), hover (при наведении), active (при нажатии), disabled (неактивное).
+</details>
+
+### Вопрос 8
+При подходе по иерархии, какой уровень используется для primary кнопки?
+
+a) `level_1`  
+b) `level_2`  
+c) `level_3`  
+d) Зависит от контекста
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: a)</b><br>
+Primary кнопка — это самый важный элемент в интерфейсе, поэтому используется `level_1`. Это элемент с максимальной визуальной важностью.
+</details>
+
+### Вопрос 9
+Какой токен используется для отступов кнопки при подходе по ролям?
+
+a) `semantic_roles.spacing.padding.medium`  
+b) `semantic_roles.spacing.role.regular`  
+c) `semantic_roles.spacing.level_2.padding`  
+d) `semantic_roles.spacing.button.padding`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+При подходе по ролям spacing организован по ролям, а не по размерам. Используется `spacing.role.regular` — это роль размера, которая может иметь разные значения в зависимости от контекста.
+</details>
+
+### Вопрос 10
+При контекстном подходе, почему семантический слой не нужен?
+
+a) Потому что он слишком сложный  
+b) Потому что токены компонента специфичны только для него и не переиспользуются  
+c) Потому что базовый слой уже содержит все нужные значения  
+d) Потому что это быстрее
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Семантический слой не нужен при контекстном подходе, потому что токены компонента специфичны только для него (например, `button.primary` используется только в кнопке) и не переиспользуются другими компонентами. Семантический слой просто дублировал бы компонентный слой 1:1 без добавления абстракции.
+</details>
+

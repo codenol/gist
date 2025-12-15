@@ -142,3 +142,145 @@
 - [Подход по иерархии](hierarchy.md)
 - [Подход по контексту](context.md)
 
+## Тест: Проверь свои знания
+
+### Вопрос 1
+При подходе по функциональности, какой токен используется для границы инпута в состоянии focus?
+
+a) `semantic_functional.color.border.default`  
+b) `semantic_functional.color.border.focus`  
+c) `semantic_functional.color.action.primary`  
+d) `semantic_functional.color.interactive.focus`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Focus — это важное функциональное состояние границы, поэтому используется `color.border.focus`. Это специальный токен для состояния фокуса.
+</details>
+
+### Вопрос 2
+При подходе по ролям, какой токен используется для placeholder текста?
+
+a) `semantic_roles.color.neutral.text_primary`  
+b) `semantic_roles.color.neutral.text_secondary`  
+c) `semantic_roles.color.neutral.text_tertiary`  
+d) `semantic_roles.color.text.placeholder`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+Placeholder — это третичный нейтральный текст, менее важный чем основной текст. Используется `color.neutral.text_tertiary`.
+</details>
+
+### Вопрос 3
+При подходе по иерархии, какой уровень используется для placeholder текста?
+
+a) `level_1`  
+b) `level_2`  
+c) `level_3`  
+d) `level_0`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+Placeholder — это наименее важный текст в инпуте, поэтому используется `level_3`. Это приглушенный, вспомогательный текст.
+</details>
+
+### Вопрос 4
+Сколько состояний имеет инпут?
+
+a) 3 (default, hover, focus)  
+b) 4 (default, hover, focus, error)  
+c) 5 (default, hover, focus, error, disabled)  
+d) 6 (default, hover, focus, error, disabled, active)
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+Инпут имеет 5 состояний: default (обычное), hover (при наведении), focus (в фокусе), error (ошибка), disabled (неактивное).
+</details>
+
+### Вопрос 5
+При подходе по функциональности, какой токен используется для фона инпута с ошибкой?
+
+a) `semantic_functional.color.background.error`  
+b) `semantic_functional.color.status.error`  
+c) `semantic_functional.color.status.error_background`  
+d) `semantic_functional.color.border.error`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+Ошибка — это статус, поэтому используется `color.status.error_background`. Это специальный фон для состояния ошибки.
+</details>
+
+### Вопрос 6
+При подходе по ролям, какой токен используется для состояния focus?
+
+a) `semantic_roles.color.brand.primary`  
+b) `semantic_roles.color.interactive.focus`  
+c) `semantic_roles.color.neutral.border_focus`  
+d) `semantic_roles.color.surface.focus`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Focus — это интерактивное состояние, поэтому используется `color.interactive.focus`. Это состояние взаимодействия пользователя с элементом.
+</details>
+
+### Вопрос 7
+При подходе по иерархии, какой уровень используется для активного инпута (default состояние)?
+
+a) `level_1`  
+b) `level_2`  
+c) `level_3`  
+d) Зависит от контекста
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: a)</b><br>
+Активный инпут — это основной элемент для ввода данных, поэтому используется `level_1`. Это самый важный уровень для активного состояния.
+</details>
+
+### Вопрос 8
+При контекстном подходе, на что ссылается токен `input.border.error`?
+
+a) `{semantic_functional.color.border.error}`  
+b) `{semantic_roles.color.status.error}`  
+c) `{base.color.red.500}`  
+d) `{semantic_hierarchy.color.status.error}`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+При контекстном подходе семантический слой не используется. Компонентные токены ссылаются напрямую на базовый слой: `{base.color.red.500}`.
+</details>
+
+### Вопрос 9
+Какой токен используется для текста placeholder при подходе по функциональности?
+
+a) `semantic_functional.color.text.primary`  
+b) `semantic_functional.color.text.secondary`  
+c) `semantic_functional.color.text.tertiary`  
+d) `semantic_functional.color.text.placeholder`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+Placeholder — это третичный текст, менее важный чем основной. Используется `color.text.tertiary` — это функциональная роль для менее важного текста.
+</details>
+
+### Вопрос 10
+Почему состояние focus критически важно для инпута?
+
+a) Потому что оно красивое  
+b) Потому что оно помогает пользователю понять, где находится курсор и какой элемент активен  
+c) Потому что оно нужно для анимации  
+d) Потому что оно используется в мобильных версиях
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Состояние focus критически важно для доступности и UX. Оно помогает пользователю понять, где находится курсор и какой элемент активен, особенно важно для пользователей клавиатурной навигации и скринридеров.
+</details>
+

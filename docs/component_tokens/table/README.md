@@ -141,3 +141,145 @@
 - [Подход по иерархии](hierarchy.md)
 - [Подход по контексту](context.md)
 
+## Тест: Проверь свои знания
+
+### Вопрос 1
+При подходе по функциональности, какой токен используется для фона selected строки в таблице?
+
+a) `semantic_functional.color.background.selected`  
+b) `semantic_functional.color.action.primary`  
+c) `semantic_functional.color.status.info`  
+d) `semantic_functional.color.surface.selected`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Selected строка — это действие выбора, поэтому используется `color.action.primary`. Это функциональное действие пользователя.
+</details>
+
+### Вопрос 2
+При подходе по ролям, какой токен используется для фона заголовка таблицы?
+
+a) `semantic_roles.color.surface.primary`  
+b) `semantic_roles.color.surface.secondary`  
+c) `semantic_roles.color.neutral.medium`  
+d) `semantic_roles.color.brand.primary`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Заголовок таблицы — это вторичная поверхность, которая выделяется, но не доминирует. Используется `color.surface.secondary`.
+</details>
+
+### Вопрос 3
+При подходе по иерархии, какой уровень используется для обычных строк таблицы?
+
+a) `level_1`  
+b) `level_2`  
+c) `level_3`  
+d) Зависит от контекста
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: a)</b><br>
+Обычные строки таблицы — это основной контент, поэтому используется `level_1`. Это самый важный уровень для данных.
+</details>
+
+### Вопрос 4
+Сколько состояний имеет строка таблицы?
+
+a) 2 (default, hover)  
+b) 3 (default, hover, selected)  
+c) 4 (default, hover, selected, active)  
+d) 5 (default, hover, selected, active, disabled)
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Строка таблицы имеет 3 состояния: default (обычное), hover (при наведении), selected (выбранное).
+</details>
+
+### Вопрос 5
+При подходе по функциональности, какой токен используется для текста на selected строке?
+
+a) `semantic_functional.color.text.primary`  
+b) `semantic_functional.color.text.secondary`  
+c) `semantic_functional.color.text.inverse`  
+d) `semantic_functional.color.text.selected`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+Текст на selected строке (которая имеет цветной фон) должен быть инверсным (белым), поэтому используется `color.text.inverse`.
+</details>
+
+### Вопрос 6
+При подходе по ролям, какой токен используется для selected строки?
+
+a) `semantic_roles.color.brand.primary`  
+b) `semantic_roles.color.interactive.default`  
+c) `semantic_roles.color.surface.selected`  
+d) `semantic_roles.color.status.info`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Selected строка — это интерактивный элемент, с которым пользователь взаимодействует. Используется `color.interactive.default`.
+</details>
+
+### Вопрос 7
+При подходе по иерархии, какой уровень используется для заголовка таблицы?
+
+a) `level_1`  
+b) `level_2`  
+c) `level_3`  
+d) `level_0`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Заголовок таблицы — это средний уровень важности. Он выделяется, но не доминирует над данными. Используется `level_2`.
+</details>
+
+### Вопрос 8
+При контекстном подходе, на что ссылается токен `table.row.background.selected`?
+
+a) `{semantic_functional.color.action.primary}`  
+b) `{semantic_roles.color.interactive.default}`  
+c) `{base.color.blue.500}`  
+d) `{semantic_hierarchy.color.level_1.action}`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: c)</b><br>
+При контекстном подходе семантический слой не используется. Компонентные токены ссылаются напрямую на базовый слой: `{base.color.blue.500}`.
+</details>
+
+### Вопрос 9
+Почему hover состояние важно для таблицы?
+
+a) Потому что оно красивое  
+b) Потому что оно помогает пользователю отслеживать строку, на которую он наводит курсор  
+c) Потому что оно нужно для анимации  
+d) Потому что оно используется в мобильных версиях
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Hover состояние критически важно для таблиц, потому что помогает пользователю отслеживать строку, на которую он наводит курсор, особенно при работе с большими таблицами. Это улучшает читаемость и UX.
+</details>
+
+### Вопрос 10
+При подходе по функциональности, какой токен используется для фона заголовка таблицы?
+
+a) `semantic_functional.color.background.primary`  
+b) `semantic_functional.color.background.secondary`  
+c) `semantic_functional.color.surface.header`  
+d) `semantic_functional.color.neutral.medium`
+
+<details>
+<summary>Показать ответ</summary>
+<b>Правильный ответ: b)</b><br>
+Заголовок таблицы — это вторичный фон, который структурирует данные. Используется `color.background.secondary` — это функциональная роль для структурирующего элемента.
+</details>
+
