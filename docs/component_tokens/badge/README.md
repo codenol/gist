@@ -80,33 +80,35 @@
 
 ### 4. Подход по контексту
 
-**Философия**: Использую готовые токены из контекста похожих компонентов.
+**Философия**: Создаю токены специально для компонента, ссылаясь напрямую на базовый слой.
 
-**Ключевые семантические токены**:
-- `semantic_context.color.alert.success.*` — для success (бейдж похож на alert)
-- `semantic_context.color.alert.error.*` — для error
-- `semantic_context.color.alert.warning.*` — для warning
-- `semantic_context.color.button.primary.*` — для info (похож на кнопку)
-- `semantic_context.color.card.*` — для neutral (похож на карточку)
+**Ключевые особенности**:
+- **Семантический слой не нужен** — компонентные токены ссылаются напрямую на `base.*`
+- `badge.variant.success.background` → `{base.color.green.50}`
+- `badge.variant.info.background` → `{base.color.blue.500}`
+- `badge.padding.x` → `{base.spacing.sm}`
+- Каждый компонент имеет свои собственные токены, не переиспользуемые другими компонентами
 
 **Особенности мышления**:
-- Статусы = alert → `color.alert.*`
-- Info = button → `color.button.primary.*`
-- Neutral = card → `color.card.*`
-- Переиспользование контекстных токенов
+- Это бейдж → создаю токены специально для бейджа
+- Выбираю базовые токены напрямую, без промежуточного слоя
+- Не нужно думать о функциональности, ролях или иерархии
+- Токены максимально специфичны для компонента
 
-**Преимущества**: Консистентность с другими компонентами, простота.
+**Преимущества**: Максимальная простота и скорость. Прямая связь с базовым слоем. Понятность.
+
+**Недостатки**: Нет абстракции — сложнее менять значения для всех компонентов. Сложнее White Label — нужно менять компонентные токены.
 
 ## Сравнительная таблица
 
 | Аспект | Функциональность | Роли | Иерархия | Контекст |
 |--------|------------------|------|----------|----------|
-| **Success фон** | `status.success_background` | `status.success_background` | `status.success_background` | `alert.success.background` |
-| **Error фон** | `status.error_background` | `status.error_background` | `status.error_background` | `alert.error.background` |
-| **Info фон** | `action.primary` | `brand.primary` | `level_1.action` | `button.primary.background` |
-| **Neutral фон** | `background.secondary` | `surface.secondary` | `level_2.background` | `card.background` |
-| **Border radius** | `border_radius.full` | `border_radius.role.pill` | `border_radius.level_3` | `border_radius.alert` |
-| **Сложность** | Низкая | Средняя | Средняя | Низкая |
+| **Success фон** | `status.success_background` → `base.color.green.50` | `status.success_background` → `base.color.green.50` | `status.success_background` → `base.color.green.50` | `base.color.green.50` (напрямую) |
+| **Error фон** | `status.error_background` → `base.color.red.50` | `status.error_background` → `base.color.red.50` | `status.error_background` → `base.color.red.50` | `base.color.red.50` (напрямую) |
+| **Info фон** | `action.primary` → `base.color.blue.500` | `brand.primary` → `base.color.blue.500` | `level_1.action` → `base.color.blue.500` | `base.color.blue.500` (напрямую) |
+| **Border radius** | `border_radius.full` → `base.border_radius.full` | `border_radius.role.pill` → `base.border_radius.full` | `border_radius.level_3` → `base.border_radius.lg` | `base.border_radius.full` (напрямую) |
+| **Семантический слой** | Нужен (переиспользование) | Нужен (переиспользование) | Нужен (переиспользование) | **Не нужен** (нет переиспользования) |
+| **Сложность** | Низкая | Средняя | Средняя | Очень низкая |
 | **White Label** | Сложно | Идеально | Средне | Сложно |
 
 ## Особенности для бейджа
@@ -116,6 +118,15 @@
 - **Компактность** — бейдж должен быть компактным
 - **Pill форма** — обычно используется полное скругление
 - **Размеры** — должны масштабироваться пропорционально
+
+## Важное замечание о контекстном подходе
+
+При контекстном подходе **семантический слой не нужен**, потому что:
+1. Токены компонента специфичны только для него (например, `badge.variant.success.background` используется только в бейдже)
+2. Переиспользование токенов бейджа в других компонентах — плохая практика (путает дизайнеров)
+3. Семантический слой просто дублировал бы компонентный слой 1:1 без добавления абстракции
+
+Поэтому компонентные токены ссылаются напрямую на базовый слой: `badge.variant.success.background = "{base.color.green.50}"`
 
 ## Детальная документация по каждому подходу
 

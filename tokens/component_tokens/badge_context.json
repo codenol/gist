@@ -2,64 +2,63 @@
   "badge": {
     "variant": {
       "success": {
-        "background": "{semantic_context.color.alert.success.background}",
-        "text": "{semantic_context.color.alert.success.text}",
-        "border": "{semantic_context.color.alert.success.border}"
+        "background": "{base.color.green.50}",
+        "text": "{base.color.green.900}",
+        "border": "{base.color.green.500}"
       },
       "error": {
-        "background": "{semantic_context.color.alert.error.background}",
-        "text": "{semantic_context.color.alert.error.text}",
-        "border": "{semantic_context.color.alert.error.border}"
+        "background": "{base.color.red.50}",
+        "text": "{base.color.red.900}",
+        "border": "{base.color.red.500}"
       },
       "warning": {
-        "background": "{semantic_context.color.alert.warning.background}",
-        "text": "{semantic_context.color.alert.warning.text}",
-        "border": "{semantic_context.color.alert.warning.border}"
+        "background": "{base.color.yellow.50}",
+        "text": "{base.color.yellow.900}",
+        "border": "{base.color.yellow.500}"
       },
       "info": {
-        "background": "{semantic_context.color.button.primary.background}",
-        "text": "{semantic_context.color.button.primary.text}",
-        "border": "{semantic_context.color.button.primary.border}"
+        "background": "{base.color.blue.500}",
+        "text": "{base.color.white}",
+        "border": "{base.color.blue.500}"
       },
       "neutral": {
-        "background": "{semantic_context.color.card.background}",
-        "text": "{semantic_context.color.card.text}",
-        "border": "{semantic_context.color.card.border}"
+        "background": "{base.color.gray.100}",
+        "text": "{base.color.gray.900}",
+        "border": "{base.color.gray.300}"
       }
     },
     "padding": {
-      "x": "{semantic_context.spacing.alert.padding}",
-      "y": "{semantic_context.spacing.alert.padding}"
+      "x": "{base.spacing.sm}",
+      "y": "{base.spacing.sm}"
     },
-    "border_radius": "{semantic_context.border_radius.alert}",
+    "border_radius": "{base.border_radius.full}",
     "typography": {
-      "font_size": "{semantic_context.typography.alert.font_size}",
-      "font_weight": "{semantic_context.typography.alert.font_weight}",
-      "line_height": "{semantic_context.typography.alert.line_height}"
+      "font_size": "{base.typography.font_size.sm}",
+      "font_weight": "{base.typography.font_weight.medium}",
+      "line_height": "{base.typography.line_height.normal}"
     },
     "size": {
       "small": {
         "padding": {
-          "x": "{semantic_context.spacing.alert.padding}",
-          "y": "{semantic_context.spacing.alert.padding}"
+          "x": "{base.spacing.sm}",
+          "y": "{base.spacing.sm}"
         },
-        "font_size": "{semantic_context.typography.alert.font_size}"
+        "font_size": "{base.typography.font_size.xs}"
       },
       "medium": {
         "padding": {
-          "x": "{semantic_context.spacing.alert.padding}",
-          "y": "{semantic_context.spacing.alert.padding}"
+          "x": "{base.spacing.sm}",
+          "y": "{base.spacing.sm}"
         },
-        "font_size": "{semantic_context.typography.alert.font_size}"
+        "font_size": "{base.typography.font_size.sm}"
       },
       "large": {
         "padding": {
-          "x": "{semantic_context.spacing.alert.padding}",
-          "y": "{semantic_context.spacing.alert.padding}"
+          "x": "{base.spacing.md}",
+          "y": "{base.spacing.sm}"
         },
-        "font_size": "{semantic_context.typography.alert.font_size}"
+        "font_size": "{base.typography.font_size.base}"
       }
     }
   }
 }
-

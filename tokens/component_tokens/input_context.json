@@ -1,58 +1,57 @@
 {
   "input": {
     "background": {
-      "default": "{semantic_context.color.input.background}",
-      "hover": "{semantic_context.color.input.background}",
-      "focus": "{semantic_context.color.input.background}",
-      "error": "{semantic_context.color.input.background}",
-      "disabled": "{semantic_context.color.input.background_disabled}"
+      "default": "{base.color.white}",
+      "hover": "{base.color.white}",
+      "focus": "{base.color.white}",
+      "error": "{base.color.red.50}",
+      "disabled": "{base.color.gray.50}"
     },
     "text": {
-      "default": "{semantic_context.color.input.text}",
-      "placeholder": "{semantic_context.color.input.text_placeholder}",
-      "disabled": "{semantic_context.color.input.text_disabled}"
+      "default": "{base.color.gray.900}",
+      "placeholder": "{base.color.gray.500}",
+      "disabled": "{base.color.gray.400}"
     },
     "border": {
-      "default": "{semantic_context.color.input.border}",
-      "hover": "{semantic_context.color.input.border_hover}",
-      "focus": "{semantic_context.color.input.border_focus}",
-      "error": "{semantic_context.color.input.border_error}",
-      "disabled": "{semantic_context.color.input.border}"
+      "default": "{base.color.gray.300}",
+      "hover": "{base.color.gray.400}",
+      "focus": "{base.color.blue.500}",
+      "error": "{base.color.red.500}",
+      "disabled": "{base.color.gray.300}"
     },
     "padding": {
-      "x": "{semantic_context.spacing.input.padding_x}",
-      "y": "{semantic_context.spacing.input.padding_y}"
+      "x": "{base.spacing.md}",
+      "y": "{base.spacing.sm}"
     },
-    "gap": "{semantic_context.spacing.input.gap}",
-    "border_radius": "{semantic_context.border_radius.input}",
+    "gap": "{base.spacing.sm}",
+    "border_radius": "{base.border_radius.md}",
     "typography": {
-      "font_size": "{semantic_context.typography.input.font_size}",
-      "font_weight": "{semantic_context.typography.input.font_weight}",
-      "line_height": "{semantic_context.typography.input.line_height}"
+      "font_size": "{base.typography.font_size.base}",
+      "font_weight": "{base.typography.font_weight.regular}",
+      "line_height": "{base.typography.line_height.normal}"
     },
     "size": {
       "small": {
         "padding": {
-          "x": "{semantic_context.spacing.input.padding_x}",
-          "y": "{semantic_context.spacing.input.padding_y}"
+          "x": "{base.spacing.sm}",
+          "y": "{base.spacing.sm}"
         },
-        "font_size": "{semantic_context.typography.input.font_size}"
+        "font_size": "{base.typography.font_size.sm}"
       },
       "medium": {
         "padding": {
-          "x": "{semantic_context.spacing.input.padding_x}",
-          "y": "{semantic_context.spacing.input.padding_y}"
+          "x": "{base.spacing.md}",
+          "y": "{base.spacing.sm}"
         },
-        "font_size": "{semantic_context.typography.input.font_size}"
+        "font_size": "{base.typography.font_size.base}"
       },
       "large": {
         "padding": {
-          "x": "{semantic_context.spacing.input.padding_x}",
-          "y": "{semantic_context.spacing.input.padding_y}"
+          "x": "{base.spacing.lg}",
+          "y": "{base.spacing.md}"
         },
-        "font_size": "{semantic_context.typography.input.font_size}"
+        "font_size": "{base.typography.font_size.lg}"
       }
     }
   }
 }
-

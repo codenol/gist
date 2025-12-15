@@ -2,86 +2,100 @@
 
 ## Задача
 
-Я дизайнер и у меня задача создать компонент "бейдж" (метка). Мне нужно определить все токены, которые будут использоваться для стилизации этого компонента, опираясь на семантический слой, организованный по контексту использования.
+Я дизайнер и у меня задача создать компонент "бейдж" (метка). Мне нужно определить все токены, которые будут использоваться для стилизации этого компонента, используя контекстный подход.
 
-## Выбор семантики
+## Выбор подхода
 
-Я выбираю подход по контексту (`semantic_context`), потому что мне важно понимать, **где и как** используется компонент. Бейдж часто используется для показа статусов, похожих на alert, поэтому я могу использовать контекстные токены из `alert` для вариантов статуса.
+Я выбираю подход по контексту, потому что мне важно понимать, **где и как** используется компонент. Бейдж — это конкретный компонент, и я создаю токены специально для него, ссылаясь напрямую на базовый слой.
+
+## Почему семантический слой не нужен?
+
+При контекстном подходе семантический слой **не нужен**, потому что:
+
+1. **Нет переиспользования**: Токены бейджа используются только в бейдже. Использовать `color.badge.success` в других компонентах — это плохая практика.
+
+2. **1:1 дублирование**: Если семантический слой специфичен для компонента (например, `semantic_context.color.badge.*`), он просто дублирует компонентный слой без добавления абстракции.
+
+3. **Прямая связь с базой**: Компонентные токены могут напрямую ссылаться на базовый слой, что проще и понятнее.
 
 ## Процесс создания токенов
 
-### Шаг 1: Использование контекстных токенов из alert
+### Шаг 1: Анализ структуры бейджа
 
-Сначала я смотрю, какие контекстные токены я могу использовать:
-- `semantic_context.color.alert.success.*` — для success бейджа
-- `semantic_context.color.alert.error.*` — для error бейджа
-- `semantic_context.color.alert.warning.*` — для warning бейджа
-- `semantic_context.spacing.alert.*` — для spacing
-- `semantic_context.typography.alert.*` — для типографики
-- `semantic_context.border_radius.alert` — для border radius
+Сначала я думаю о том, из каких частей состоит бейдж:
+- Фон (background) — показывает категорию/статус
+- Текст (text) — читаемый текст на фоне
+- Граница (border) — опционально
+- Варианты: success, error, warning, info, neutral
+- Размеры: small, medium, large
 
-Бейдж и alert функционально похожи — оба показывают статус, поэтому я могу переиспользовать токены.
+### Шаг 2: Выбор базовых токенов для вариантов статуса
 
-### Шаг 2: Варианты статуса из контекста alert
+Бейдж часто показывает статус, поэтому я использую базовые токены статусов:
+- **Success**: `base.color.green.50` для фона, `base.color.green.900` для текста, `base.color.green.500` для границы
+- **Error**: `base.color.red.50` для фона, `base.color.red.900` для текста, `base.color.red.500` для границы
+- **Warning**: `base.color.yellow.50` для фона, `base.color.yellow.900` для текста, `base.color.yellow.500` для границы
 
-Бейджи статусов похожи на alert:
-- **Success**: `semantic_context.color.alert.success.background` для фона, `semantic_context.color.alert.success.text` для текста, `semantic_context.color.alert.success.border` для границы
-- **Error**: `semantic_context.color.alert.error.background` для фона, `semantic_context.color.alert.error.text` для текста, `semantic_context.color.alert.error.border` для границы
-- **Warning**: `semantic_context.color.alert.warning.background` для фона, `semantic_context.color.alert.warning.text` для текста, `semantic_context.color.alert.warning.border` для границы
+### Шаг 3: Выбор токенов для info и neutral вариантов
 
-Это идеально — бейдж и alert показывают статус, поэтому я переиспользую токены.
+Для info бейджа:
+- `base.color.blue.500` — фон и граница
+- `base.color.white` — текст
 
-### Шаг 3: Info бейдж из контекста button
+Для neutral бейджа:
+- `base.color.gray.100` — нейтральный фон
+- `base.color.gray.900` — обычный текст
+- `base.color.gray.300` — стандартная граница
 
-Info бейдж похож на кнопку (показывает действие/информацию):
-- `semantic_context.color.button.primary.background` — фон primary кнопки
-- `semantic_context.color.button.primary.text` — текст primary кнопки
-- `semantic_context.color.button.primary.border` — граница primary кнопки
+### Шаг 4: Spacing для бейджа
 
-### Шаг 4: Neutral бейдж из контекста card
+Для отступов:
+- `base.spacing.sm` для padding — бейдж должен быть компактным
+- Для больших бейджей: `base.spacing.md`
 
-Neutral бейдж похож на карточку (нейтральный элемент):
-- `semantic_context.color.card.background` — фон карточки
-- `semantic_context.color.card.text` — текст карточки
-- `semantic_context.color.card.border` — граница карточки
-
-### Шаг 5: Spacing из контекста alert
-
-Для spacing:
-- `semantic_context.spacing.alert.padding` — padding для бейджа
-
-### Шаг 6: Typography из контекста alert
+### Шаг 5: Typography
 
 Для типографики:
-- `semantic_context.typography.alert.*` — font_size, font_weight, line_height для бейджа
+- `base.typography.font_size.sm` — маленький текст
+- `base.typography.font_weight.medium` — немного жирнее
+- `base.typography.line_height.normal` — стандартная высота строки
 
-### Шаг 7: Border radius из контекста alert
+### Шаг 6: Border radius
 
-- `semantic_context.border_radius.alert` — скругление для бейджа
+- `base.border_radius.full` — полное скругление (pill), подходит для бейджа
+
+### Шаг 7: Размеры
+
+Для размеров варьирую padding и font_size:
+- Small: `base.spacing.sm` + `base.typography.font_size.xs`
+- Medium: `base.spacing.sm` + `base.typography.font_size.sm`
+- Large: `base.spacing.md` + `base.typography.font_size.base`
 
 ## Примеры использования
 
 ```json
 {
-  "badge.variant.success.background": "{semantic_context.color.alert.success.background}",
-  "badge.variant.success.text": "{semantic_context.color.alert.success.text}",
-  "badge.variant.info.background": "{semantic_context.color.button.primary.background}",
-  "badge.padding.x": "{semantic_context.spacing.alert.padding}"
+  "badge.variant.success.background": "{base.color.green.50}",
+  "badge.variant.success.text": "{base.color.green.900}",
+  "badge.padding.x": "{base.spacing.sm}",
+  "badge.border_radius": "{base.border_radius.full}"
 }
 ```
 
 ## Преимущества подхода
 
-1. **Простота**: Я переиспользую уже существующие контекстные токены
-2. **Консистентность**: Бейдж выглядит консистентно с alert, button и card
-3. **Быстрота**: Создание компонентных токенов занимает минимум времени
-4. **Переиспользование**: Токены из других компонентов переиспользуются для бейджа
+1. **Простота**: Прямая связь с базовым слоем
+2. **Понятность**: Ясно видно, какие базовые значения используются
+3. **Быстрота**: Не нужно создавать семантический слой
+4. **Специфичность**: Токены максимально специфичны для компонента
+
+## Недостатки подхода
+
+1. **Нет абстракции**: Если нужно изменить цвет всех success бейджей, нужно менять в компонентных токенах
+2. **Сложнее White Label**: Для разных брендов нужно менять компонентные токены
 
 ## Размышления
 
-Когда я создаю компонентные токены для бейджа, я мыслю так: "На что похож этот вариант бейджа?" Success бейдж похож на success alert, поэтому я использую `color.alert.success.*`. Info бейдж похож на primary кнопку, поэтому `color.button.primary.*`. Neutral бейдж похож на карточку, поэтому `color.card.*`.
+Когда я создаю компонентные токены для бейджа при контекстном подходе, я мыслю так: "Это бейдж, значит мне нужны токены специально для бейджа." Я выбираю базовые токены напрямую, без промежуточного семантического слоя.
 
-Этот подход особенно хорош, когда в системе уже есть контекстные токены для похожих компонентов. Мне не нужно создавать новые токены — я переиспользую существующие.
-
-Однако есть нюанс: если в семантическом слое нет подходящих контекстных токенов, мне придется их создать сначала или использовать другой подход. Но для стандартных компонентов, таких как бейдж, это работает отлично, особенно когда бейдж функционально похож на alert.
-
+Бейдж — это компонент, который функционально показывает статус или категорию, поэтому использование базовых токенов статусов логично и понятно.

@@ -2,71 +2,73 @@
   "button": {
     "primary": {
       "background": {
-        "default": "{semantic_context.color.button.primary.background}",
-        "hover": "{semantic_context.color.button.primary.background_hover}",
-        "active": "{semantic_context.color.button.primary.background_active}",
-        "disabled": "{semantic_context.color.button.disabled.background}"
+        "default": "{base.color.blue.500}",
+        "hover": "{base.color.blue.600}",
+        "active": "{base.color.blue.700}",
+        "disabled": "{base.color.gray.400}"
       },
       "text": {
-        "default": "{semantic_context.color.button.primary.text}",
-        "disabled": "{semantic_context.color.button.disabled.text}"
+        "default": "{base.color.white}",
+        "disabled": "{base.color.gray.400}"
       },
       "border": {
-        "default": "{semantic_context.color.button.primary.border}",
-        "disabled": "{semantic_context.color.button.disabled.border}"
+        "default": "{base.color.blue.500}",
+        "disabled": "{base.color.gray.200}"
       }
     },
     "secondary": {
       "background": {
-        "default": "{semantic_context.color.button.secondary.background}",
-        "hover": "{semantic_context.color.button.secondary.background_hover}",
-        "active": "{semantic_context.color.button.secondary.background_active}",
-        "disabled": "{semantic_context.color.button.disabled.background}"
+        "default": "{base.color.gray.100}",
+        "hover": "{base.color.gray.200}",
+        "active": "{base.color.gray.300}",
+        "disabled": "{base.color.gray.100}"
       },
       "text": {
-        "default": "{semantic_context.color.button.secondary.text}",
-        "disabled": "{semantic_context.color.button.disabled.text}"
+        "default": "{base.color.gray.900}",
+        "disabled": "{base.color.gray.400}"
       },
       "border": {
-        "default": "{semantic_context.color.button.secondary.border}",
-        "disabled": "{semantic_context.color.button.disabled.border}"
+        "default": "{base.color.gray.300}",
+        "disabled": "{base.color.gray.200}"
       }
     },
     "padding": {
-      "x": "{semantic_context.spacing.button.padding_x}",
-      "y": "{semantic_context.spacing.button.padding_y}"
+      "x": "{base.spacing.md}",
+      "y": "{base.spacing.sm}"
     },
-    "gap": "{semantic_context.spacing.button.gap}",
-    "border_radius": "{semantic_context.border_radius.button}",
+    "gap": "{base.spacing.sm}",
+    "border_radius": "{base.border_radius.md}",
     "typography": {
-      "font_size": "{semantic_context.typography.button.font_size}",
-      "font_weight": "{semantic_context.typography.button.font_weight}",
-      "line_height": "{semantic_context.typography.button.line_height}"
+      "font_size": "{base.typography.font_size.base}",
+      "font_weight": "{base.typography.font_weight.medium}",
+      "line_height": "{base.typography.line_height.normal}"
     },
     "size": {
       "small": {
         "padding": {
-          "x": "{semantic_context.spacing.button.padding_x}",
-          "y": "{semantic_context.spacing.button.padding_y}"
+          "x": "{base.spacing.sm}",
+          "y": "{base.spacing.sm}"
         },
-        "font_size": "{semantic_context.typography.button.font_size}"
+        "font_size": "{base.typography.font_size.sm}"
       },
       "medium": {
         "padding": {
-          "x": "{semantic_context.spacing.button.padding_x}",
-          "y": "{semantic_context.spacing.button.padding_y}"
+          "x": "{base.spacing.md}",
+          "y": "{base.spacing.sm}"
         },
-        "font_size": "{semantic_context.typography.button.font_size}"
+        "font_size": "{base.typography.font_size.base}"
       },
       "large": {
         "padding": {
-          "x": "{semantic_context.spacing.button.padding_x}",
-          "y": "{semantic_context.spacing.button.padding_y}"
+          "x": "{base.spacing.lg}",
+          "y": "{base.spacing.md}"
         },
-        "font_size": "{semantic_context.typography.button.font_size}"
+        "font_size": "{base.typography.font_size.lg}"
       }
     },
-    "shadow": "{semantic_context.shadow.button}"
+    "shadow": {
+      "default": "{base.shadow.sm}",
+      "hover": "{base.shadow.md}"
+    }
   }
 }
-
