@@ -1,0 +1,65 @@
+{
+  "badge": {
+    "variant": {
+      "success": {
+        "background": "{semantic_hierarchy.color.status.success_background}",
+        "text": "{semantic_hierarchy.color.status.success}",
+        "border": "{semantic_hierarchy.color.status.success}"
+      },
+      "error": {
+        "background": "{semantic_hierarchy.color.status.error_background}",
+        "text": "{semantic_hierarchy.color.status.error}",
+        "border": "{semantic_hierarchy.color.status.error}"
+      },
+      "warning": {
+        "background": "{semantic_hierarchy.color.status.warning_background}",
+        "text": "{semantic_hierarchy.color.status.warning}",
+        "border": "{semantic_hierarchy.color.status.warning}"
+      },
+      "info": {
+        "background": "{semantic_hierarchy.color.level_1.action}",
+        "text": "{semantic_hierarchy.color.level_1.text}",
+        "border": "{semantic_hierarchy.color.level_1.action}"
+      },
+      "neutral": {
+        "background": "{semantic_hierarchy.color.level_2.background}",
+        "text": "{semantic_hierarchy.color.level_2.text}",
+        "border": "{semantic_hierarchy.color.level_2.border}"
+      }
+    },
+    "padding": {
+      "x": "{semantic_hierarchy.spacing.level_1.padding}",
+      "y": "{semantic_hierarchy.spacing.level_1.padding}"
+    },
+    "border_radius": "{semantic_hierarchy.border_radius.level_3}",
+    "typography": {
+      "font_size": "{semantic_hierarchy.typography.body_small.font_size}",
+      "font_weight": "{semantic_hierarchy.typography.level_3.font_weight}",
+      "line_height": "{semantic_hierarchy.typography.level_3.line_height}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_hierarchy.spacing.level_1.padding}",
+          "y": "{semantic_hierarchy.spacing.level_1.padding}"
+        },
+        "font_size": "{semantic_hierarchy.typography.body_small.font_size}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_hierarchy.spacing.level_1.padding}",
+          "y": "{semantic_hierarchy.spacing.level_1.padding}"
+        },
+        "font_size": "{semantic_hierarchy.typography.body_small.font_size}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_hierarchy.spacing.level_2.padding}",
+          "y": "{semantic_hierarchy.spacing.level_1.padding}"
+        },
+        "font_size": "{semantic_hierarchy.typography.level_3.font_size}"
+      }
+    }
+  }
+}
+

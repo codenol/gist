@@ -1,0 +1,65 @@
+{
+  "badge": {
+    "variant": {
+      "success": {
+        "background": "{semantic_context.color.alert.success.background}",
+        "text": "{semantic_context.color.alert.success.text}",
+        "border": "{semantic_context.color.alert.success.border}"
+      },
+      "error": {
+        "background": "{semantic_context.color.alert.error.background}",
+        "text": "{semantic_context.color.alert.error.text}",
+        "border": "{semantic_context.color.alert.error.border}"
+      },
+      "warning": {
+        "background": "{semantic_context.color.alert.warning.background}",
+        "text": "{semantic_context.color.alert.warning.text}",
+        "border": "{semantic_context.color.alert.warning.border}"
+      },
+      "info": {
+        "background": "{semantic_context.color.button.primary.background}",
+        "text": "{semantic_context.color.button.primary.text}",
+        "border": "{semantic_context.color.button.primary.border}"
+      },
+      "neutral": {
+        "background": "{semantic_context.color.card.background}",
+        "text": "{semantic_context.color.card.text}",
+        "border": "{semantic_context.color.card.border}"
+      }
+    },
+    "padding": {
+      "x": "{semantic_context.spacing.alert.padding}",
+      "y": "{semantic_context.spacing.alert.padding}"
+    },
+    "border_radius": "{semantic_context.border_radius.alert}",
+    "typography": {
+      "font_size": "{semantic_context.typography.alert.font_size}",
+      "font_weight": "{semantic_context.typography.alert.font_weight}",
+      "line_height": "{semantic_context.typography.alert.line_height}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_context.spacing.alert.padding}",
+          "y": "{semantic_context.spacing.alert.padding}"
+        },
+        "font_size": "{semantic_context.typography.alert.font_size}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_context.spacing.alert.padding}",
+          "y": "{semantic_context.spacing.alert.padding}"
+        },
+        "font_size": "{semantic_context.typography.alert.font_size}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_context.spacing.alert.padding}",
+          "y": "{semantic_context.spacing.alert.padding}"
+        },
+        "font_size": "{semantic_context.typography.alert.font_size}"
+      }
+    }
+  }
+}
+

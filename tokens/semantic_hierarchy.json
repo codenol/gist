@@ -1,0 +1,93 @@
+{
+  "color": {
+    "level_1": {
+      "background": "{base.color.white}",
+      "text": "{base.color.gray.900}",
+      "border": "{base.color.gray.300}",
+      "action": "{base.color.blue.500}",
+      "action_hover": "{base.color.blue.600}",
+      "action_active": "{base.color.blue.700}"
+    },
+    "level_2": {
+      "background": "{base.color.gray.50}",
+      "text": "{base.color.gray.900}",
+      "text_secondary": "{base.color.gray.600}",
+      "border": "{base.color.gray.300}",
+      "action": "{base.color.blue.500}",
+      "action_hover": "{base.color.blue.600}",
+      "action_active": "{base.color.blue.700}"
+    },
+    "level_3": {
+      "background": "{base.color.gray.100}",
+      "text": "{base.color.gray.700}",
+      "text_secondary": "{base.color.gray.500}",
+      "border": "{base.color.gray.400}",
+      "action": "{base.color.gray.500}",
+      "action_hover": "{base.color.gray.600}",
+      "action_active": "{base.color.gray.700}"
+    },
+    "status": {
+      "success": "{base.color.green.500}",
+      "success_background": "{base.color.green.50}",
+      "error": "{base.color.red.500}",
+      "error_background": "{base.color.red.50}",
+      "warning": "{base.color.yellow.500}",
+      "warning_background": "{base.color.yellow.50}"
+    }
+  },
+  "spacing": {
+    "level_1": {
+      "padding": "{base.spacing.sm}",
+      "margin": "{base.spacing.sm}",
+      "gap": "{base.spacing.sm}"
+    },
+    "level_2": {
+      "padding": "{base.spacing.md}",
+      "margin": "{base.spacing.md}",
+      "gap": "{base.spacing.md}"
+    },
+    "level_3": {
+      "padding": "{base.spacing.lg}",
+      "margin": "{base.spacing.lg}",
+      "gap": "{base.spacing.lg}"
+    }
+  },
+  "border_radius": {
+    "level_1": "{base.border_radius.sm}",
+    "level_2": "{base.border_radius.md}",
+    "level_3": "{base.border_radius.lg}"
+  },
+  "typography": {
+    "level_1": {
+      "font_size": "{base.typography.font_size.3xl}",
+      "font_weight": "{base.typography.font_weight.bold}",
+      "line_height": "{base.typography.line_height.tight}"
+    },
+    "level_2": {
+      "font_size": "{base.typography.font_size.xl}",
+      "font_weight": "{base.typography.font_weight.semibold}",
+      "line_height": "{base.typography.line_height.tight}"
+    },
+    "level_3": {
+      "font_size": "{base.typography.font_size.base}",
+      "font_weight": "{base.typography.font_weight.regular}",
+      "line_height": "{base.typography.line_height.normal}"
+    },
+    "body": {
+      "font_size": "{base.typography.font_size.base}",
+      "font_weight": "{base.typography.font_weight.regular}",
+      "line_height": "{base.typography.line_height.normal}"
+    },
+    "body_small": {
+      "font_size": "{base.typography.font_size.sm}",
+      "font_weight": "{base.typography.font_weight.regular}",
+      "line_height": "{base.typography.line_height.normal}"
+    }
+  },
+  "shadow": {
+    "level_1": "{base.shadow.sm}",
+    "level_2": "{base.shadow.md}",
+    "level_3": "{base.shadow.lg}"
+  }
+}
+

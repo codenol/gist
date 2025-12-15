@@ -1,0 +1,65 @@
+{
+  "badge": {
+    "variant": {
+      "success": {
+        "background": "{semantic_roles.color.status.success_background}",
+        "text": "{semantic_roles.color.status.success}",
+        "border": "{semantic_roles.color.status.success}"
+      },
+      "error": {
+        "background": "{semantic_roles.color.status.error_background}",
+        "text": "{semantic_roles.color.status.error}",
+        "border": "{semantic_roles.color.status.error}"
+      },
+      "warning": {
+        "background": "{semantic_roles.color.status.warning_background}",
+        "text": "{semantic_roles.color.status.warning}",
+        "border": "{semantic_roles.color.status.warning}"
+      },
+      "info": {
+        "background": "{semantic_roles.color.brand.primary}",
+        "text": "{semantic_roles.color.surface.primary}",
+        "border": "{semantic_roles.color.brand.primary}"
+      },
+      "neutral": {
+        "background": "{semantic_roles.color.surface.secondary}",
+        "text": "{semantic_roles.color.neutral.text_primary}",
+        "border": "{semantic_roles.color.neutral.border_default}"
+      }
+    },
+    "padding": {
+      "x": "{semantic_roles.spacing.role.compact}",
+      "y": "{semantic_roles.spacing.role.compact}"
+    },
+    "border_radius": "{semantic_roles.border_radius.role.pill}",
+    "typography": {
+      "font_size": "{semantic_roles.typography.role.body_small.font_size}",
+      "font_weight": "{semantic_roles.typography.role.body.font_weight}",
+      "line_height": "{semantic_roles.typography.role.body.line_height}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_roles.spacing.role.compact}",
+          "y": "{semantic_roles.spacing.role.compact}"
+        },
+        "font_size": "{semantic_roles.typography.role.caption.font_size}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_roles.spacing.role.compact}",
+          "y": "{semantic_roles.spacing.role.compact}"
+        },
+        "font_size": "{semantic_roles.typography.role.body_small.font_size}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_roles.spacing.role.regular}",
+          "y": "{semantic_roles.spacing.role.compact}"
+        },
+        "font_size": "{semantic_roles.typography.role.body.font_size}"
+      }
+    }
+  }
+}
+

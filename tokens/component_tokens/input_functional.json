@@ -1,0 +1,57 @@
+{
+  "input": {
+    "background": {
+      "default": "{semantic_functional.color.background.primary}",
+      "hover": "{semantic_functional.color.background.primary}",
+      "focus": "{semantic_functional.color.background.primary}",
+      "error": "{semantic_functional.color.status.error_background}",
+      "disabled": "{semantic_functional.color.background.secondary}"
+    },
+    "text": {
+      "default": "{semantic_functional.color.text.primary}",
+      "placeholder": "{semantic_functional.color.text.tertiary}",
+      "disabled": "{semantic_functional.color.text.disabled}"
+    },
+    "border": {
+      "default": "{semantic_functional.color.border.default}",
+      "hover": "{semantic_functional.color.border.hover}",
+      "focus": "{semantic_functional.color.border.focus}",
+      "error": "{semantic_functional.color.border.error}",
+      "disabled": "{semantic_functional.color.border.disabled}"
+    },
+    "padding": {
+      "x": "{semantic_functional.spacing.padding.medium}",
+      "y": "{semantic_functional.spacing.padding.small}"
+    },
+    "border_radius": "{semantic_functional.border_radius.medium}",
+    "typography": {
+      "font_size": "{semantic_functional.typography.font_size.body}",
+      "font_weight": "{semantic_functional.typography.font_weight.body}",
+      "line_height": "{semantic_functional.typography.line_height.body}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_functional.spacing.padding.small}",
+          "y": "{semantic_functional.spacing.padding.small}"
+        },
+        "font_size": "{semantic_functional.typography.font_size.body_small}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_functional.spacing.padding.medium}",
+          "y": "{semantic_functional.spacing.padding.small}"
+        },
+        "font_size": "{semantic_functional.typography.font_size.body}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_functional.spacing.padding.large}",
+          "y": "{semantic_functional.spacing.padding.medium}"
+        },
+        "font_size": "{semantic_functional.typography.font_size.heading_small}"
+      }
+    }
+  }
+}
+

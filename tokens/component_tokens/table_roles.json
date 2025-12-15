@@ -1,0 +1,62 @@
+{
+  "table": {
+    "header": {
+      "background": {
+        "default": "{semantic_roles.color.surface.secondary}"
+      },
+      "text": {
+        "default": "{semantic_roles.color.neutral.text_primary}",
+        "sorted": "{semantic_roles.color.brand.primary}"
+      },
+      "border": {
+        "default": "{semantic_roles.color.neutral.border_default}"
+      }
+    },
+    "row": {
+      "background": {
+        "default": "{semantic_roles.color.surface.primary}",
+        "hover": "{semantic_roles.color.surface.secondary}",
+        "selected": "{semantic_roles.color.interactive.default}",
+        "selected_hover": "{semantic_roles.color.interactive.hover}"
+      },
+      "text": {
+        "default": "{semantic_roles.color.neutral.text_primary}",
+        "selected": "{semantic_roles.color.surface.primary}"
+      },
+      "border": {
+        "default": "{semantic_roles.color.neutral.border_default}"
+      }
+    },
+    "cell": {
+      "padding": {
+        "x": "{semantic_roles.spacing.role.regular}",
+        "y": "{semantic_roles.spacing.role.compact}"
+      },
+      "text": {
+        "default": "{semantic_roles.color.neutral.text_primary}",
+        "secondary": "{semantic_roles.color.neutral.text_secondary}"
+      }
+    },
+    "border": {
+      "default": "{semantic_roles.color.neutral.border_default}",
+      "header": "{semantic_roles.color.neutral.border_default}"
+    },
+    "typography": {
+      "header": {
+        "font_size": "{semantic_roles.typography.role.body.font_size}",
+        "font_weight": "{semantic_roles.typography.role.body.font_weight}",
+        "line_height": "{semantic_roles.typography.role.body.line_height}"
+      },
+      "body": {
+        "font_size": "{semantic_roles.typography.role.body.font_size}",
+        "font_weight": "{semantic_roles.typography.role.body.font_weight}",
+        "line_height": "{semantic_roles.typography.role.body.line_height}"
+      }
+    },
+    "spacing": {
+      "row_gap": "{semantic_roles.spacing.role.compact}",
+      "cell_gap": "{semantic_roles.spacing.role.compact}"
+    }
+  }
+}
+

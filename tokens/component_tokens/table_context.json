@@ -1,0 +1,62 @@
+{
+  "table": {
+    "header": {
+      "background": {
+        "default": "{semantic_context.color.card.background}"
+      },
+      "text": {
+        "default": "{semantic_context.color.card.text}",
+        "sorted": "{semantic_context.color.button.primary.background}"
+      },
+      "border": {
+        "default": "{semantic_context.color.card.border}"
+      }
+    },
+    "row": {
+      "background": {
+        "default": "{semantic_context.color.card.background}",
+        "hover": "{semantic_context.color.card.background_hover}",
+        "selected": "{semantic_context.color.button.primary.background}",
+        "selected_hover": "{semantic_context.color.button.primary.background_hover}"
+      },
+      "text": {
+        "default": "{semantic_context.color.card.text}",
+        "selected": "{semantic_context.color.button.primary.text}"
+      },
+      "border": {
+        "default": "{semantic_context.color.card.border}"
+      }
+    },
+    "cell": {
+      "padding": {
+        "x": "{semantic_context.spacing.card.padding}",
+        "y": "{semantic_context.spacing.card.padding}"
+      },
+      "text": {
+        "default": "{semantic_context.color.card.text}",
+        "secondary": "{semantic_context.color.card.text_secondary}"
+      }
+    },
+    "border": {
+      "default": "{semantic_context.color.card.border}",
+      "header": "{semantic_context.color.card.border}"
+    },
+    "typography": {
+      "header": {
+        "font_size": "{semantic_context.typography.card.title.font_size}",
+        "font_weight": "{semantic_context.typography.card.title.font_weight}",
+        "line_height": "{semantic_context.typography.card.title.line_height}"
+      },
+      "body": {
+        "font_size": "{semantic_context.typography.card.body.font_size}",
+        "font_weight": "{semantic_context.typography.card.body.font_weight}",
+        "line_height": "{semantic_context.typography.card.body.line_height}"
+      }
+    },
+    "spacing": {
+      "row_gap": "{semantic_context.spacing.card.gap}",
+      "cell_gap": "{semantic_context.spacing.card.gap}"
+    }
+  }
+}
+

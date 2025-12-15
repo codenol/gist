@@ -1,0 +1,65 @@
+{
+  "badge": {
+    "variant": {
+      "success": {
+        "background": "{semantic_functional.color.status.success_background}",
+        "text": "{semantic_functional.color.status.success}",
+        "border": "{semantic_functional.color.status.success}"
+      },
+      "error": {
+        "background": "{semantic_functional.color.status.error_background}",
+        "text": "{semantic_functional.color.status.error}",
+        "border": "{semantic_functional.color.status.error}"
+      },
+      "warning": {
+        "background": "{semantic_functional.color.status.warning_background}",
+        "text": "{semantic_functional.color.status.warning}",
+        "border": "{semantic_functional.color.status.warning}"
+      },
+      "info": {
+        "background": "{semantic_functional.color.action.primary}",
+        "text": "{semantic_functional.color.text.inverse}",
+        "border": "{semantic_functional.color.action.primary}"
+      },
+      "neutral": {
+        "background": "{semantic_functional.color.background.secondary}",
+        "text": "{semantic_functional.color.text.primary}",
+        "border": "{semantic_functional.color.border.default}"
+      }
+    },
+    "padding": {
+      "x": "{semantic_functional.spacing.padding.small}",
+      "y": "{semantic_functional.spacing.padding.small}"
+    },
+    "border_radius": "{semantic_functional.border_radius.full}",
+    "typography": {
+      "font_size": "{semantic_functional.typography.font_size.body_small}",
+      "font_weight": "{semantic_functional.typography.font_weight.body_emphasis}",
+      "line_height": "{semantic_functional.typography.line_height.body}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_functional.spacing.padding.small}",
+          "y": "{semantic_functional.spacing.padding.small}"
+        },
+        "font_size": "{semantic_functional.typography.font_size.xs}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_functional.spacing.padding.small}",
+          "y": "{semantic_functional.spacing.padding.small}"
+        },
+        "font_size": "{semantic_functional.typography.font_size.body_small}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_functional.spacing.padding.medium}",
+          "y": "{semantic_functional.spacing.padding.small}"
+        },
+        "font_size": "{semantic_functional.typography.font_size.body}"
+      }
+    }
+  }
+}
+

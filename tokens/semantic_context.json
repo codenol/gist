@@ -1,0 +1,144 @@
+{
+  "color": {
+    "button": {
+      "primary": {
+        "background": "{base.color.blue.500}",
+        "background_hover": "{base.color.blue.600}",
+        "background_active": "{base.color.blue.700}",
+        "text": "{base.color.white}",
+        "border": "{base.color.blue.500}"
+      },
+      "secondary": {
+        "background": "{base.color.gray.100}",
+        "background_hover": "{base.color.gray.200}",
+        "background_active": "{base.color.gray.300}",
+        "text": "{base.color.gray.900}",
+        "border": "{base.color.gray.300}"
+      },
+      "disabled": {
+        "background": "{base.color.gray.200}",
+        "text": "{base.color.gray.400}",
+        "border": "{base.color.gray.200}"
+      }
+    },
+    "input": {
+      "background": "{base.color.white}",
+      "background_disabled": "{base.color.gray.50}",
+      "text": "{base.color.gray.900}",
+      "text_placeholder": "{base.color.gray.500}",
+      "text_disabled": "{base.color.gray.400}",
+      "border": "{base.color.gray.300}",
+      "border_hover": "{base.color.gray.400}",
+      "border_focus": "{base.color.blue.500}",
+      "border_error": "{base.color.red.500}"
+    },
+    "card": {
+      "background": "{base.color.white}",
+      "background_hover": "{base.color.gray.50}",
+      "border": "{base.color.gray.200}",
+      "text": "{base.color.gray.900}",
+      "text_secondary": "{base.color.gray.600}"
+    },
+    "alert": {
+      "success": {
+        "background": "{base.color.green.50}",
+        "text": "{base.color.green.900}",
+        "border": "{base.color.green.500}",
+        "icon": "{base.color.green.500}"
+      },
+      "error": {
+        "background": "{base.color.red.50}",
+        "text": "{base.color.red.900}",
+        "border": "{base.color.red.500}",
+        "icon": "{base.color.red.500}"
+      },
+      "warning": {
+        "background": "{base.color.yellow.50}",
+        "text": "{base.color.yellow.900}",
+        "border": "{base.color.yellow.500}",
+        "icon": "{base.color.yellow.500}"
+      }
+    },
+    "navigation": {
+      "background": "{base.color.white}",
+      "background_active": "{base.color.gray.50}",
+      "text": "{base.color.gray.900}",
+      "text_active": "{base.color.blue.500}",
+      "text_hover": "{base.color.gray.700}",
+      "border": "{base.color.gray.200}"
+    }
+  },
+  "spacing": {
+    "button": {
+      "padding_x": "{base.spacing.md}",
+      "padding_y": "{base.spacing.sm}",
+      "gap": "{base.spacing.sm}"
+    },
+    "input": {
+      "padding_x": "{base.spacing.md}",
+      "padding_y": "{base.spacing.sm}",
+      "gap": "{base.spacing.sm}"
+    },
+    "card": {
+      "padding": "{base.spacing.lg}",
+      "gap": "{base.spacing.md}",
+      "margin": "{base.spacing.md}"
+    },
+    "alert": {
+      "padding": "{base.spacing.md}",
+      "gap": "{base.spacing.sm}",
+      "margin": "{base.spacing.md}"
+    },
+    "navigation": {
+      "padding": "{base.spacing.md}",
+      "gap": "{base.spacing.lg}",
+      "item_padding": "{base.spacing.sm}"
+    }
+  },
+  "border_radius": {
+    "button": "{base.border_radius.md}",
+    "input": "{base.border_radius.md}",
+    "card": "{base.border_radius.lg}",
+    "alert": "{base.border_radius.md}"
+  },
+  "typography": {
+    "button": {
+      "font_size": "{base.typography.font_size.base}",
+      "font_weight": "{base.typography.font_weight.medium}",
+      "line_height": "{base.typography.line_height.normal}"
+    },
+    "input": {
+      "font_size": "{base.typography.font_size.base}",
+      "font_weight": "{base.typography.font_weight.regular}",
+      "line_height": "{base.typography.line_height.normal}"
+    },
+    "card": {
+      "title": {
+        "font_size": "{base.typography.font_size.xl}",
+        "font_weight": "{base.typography.font_weight.semibold}",
+        "line_height": "{base.typography.line_height.tight}"
+      },
+      "body": {
+        "font_size": "{base.typography.font_size.base}",
+        "font_weight": "{base.typography.font_weight.regular}",
+        "line_height": "{base.typography.line_height.normal}"
+      }
+    },
+    "alert": {
+      "font_size": "{base.typography.font_size.base}",
+      "font_weight": "{base.typography.font_weight.regular}",
+      "line_height": "{base.typography.line_height.normal}"
+    },
+    "navigation": {
+      "font_size": "{base.typography.font_size.base}",
+      "font_weight": "{base.typography.font_weight.medium}",
+      "line_height": "{base.typography.line_height.normal}"
+    }
+  },
+  "shadow": {
+    "button": "{base.shadow.sm}",
+    "card": "{base.shadow.md}",
+    "alert": "{base.shadow.sm}"
+  }
+}
+

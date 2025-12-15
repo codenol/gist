@@ -1,0 +1,75 @@
+{
+  "button": {
+    "primary": {
+      "background": {
+        "default": "{semantic_roles.color.brand.primary}",
+        "hover": "{semantic_roles.color.brand.primary_hover}",
+        "active": "{semantic_roles.color.brand.primary_active}",
+        "disabled": "{semantic_roles.color.interactive.disabled}"
+      },
+      "text": {
+        "default": "{semantic_roles.color.surface.primary}",
+        "disabled": "{semantic_roles.color.neutral.text_disabled}"
+      },
+      "border": {
+        "default": "{semantic_roles.color.brand.primary}",
+        "disabled": "{semantic_roles.color.neutral.border_disabled}"
+      }
+    },
+    "secondary": {
+      "background": {
+        "default": "{semantic_roles.color.surface.secondary}",
+        "hover": "{semantic_roles.color.surface.tertiary}",
+        "active": "{semantic_roles.color.surface.tertiary}",
+        "disabled": "{semantic_roles.color.surface.secondary}"
+      },
+      "text": {
+        "default": "{semantic_roles.color.neutral.text_primary}",
+        "disabled": "{semantic_roles.color.neutral.text_disabled}"
+      },
+      "border": {
+        "default": "{semantic_roles.color.neutral.border_default}",
+        "disabled": "{semantic_roles.color.neutral.border_disabled}"
+      }
+    },
+    "padding": {
+      "x": "{semantic_roles.spacing.role.regular}",
+      "y": "{semantic_roles.spacing.role.compact}"
+    },
+    "gap": "{semantic_roles.spacing.role.compact}",
+    "border_radius": "{semantic_roles.border_radius.role.rounded}",
+    "typography": {
+      "font_size": "{semantic_roles.typography.role.body.font_size}",
+      "font_weight": "{semantic_roles.typography.role.body.font_weight}",
+      "line_height": "{semantic_roles.typography.role.body.line_height}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_roles.spacing.role.compact}",
+          "y": "{semantic_roles.spacing.role.compact}"
+        },
+        "font_size": "{semantic_roles.typography.role.body_small.font_size}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_roles.spacing.role.regular}",
+          "y": "{semantic_roles.spacing.role.compact}"
+        },
+        "font_size": "{semantic_roles.typography.role.body.font_size}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_roles.spacing.role.spacious}",
+          "y": "{semantic_roles.spacing.role.regular}"
+        },
+        "font_size": "{semantic_roles.typography.role.heading.font_size}"
+      }
+    },
+    "shadow": {
+      "default": "{semantic_roles.shadow.role.subtle}",
+      "hover": "{semantic_roles.shadow.role.elevated}"
+    }
+  }
+}
+

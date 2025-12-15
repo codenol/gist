@@ -1,0 +1,57 @@
+{
+  "input": {
+    "background": {
+      "default": "{semantic_roles.color.surface.primary}",
+      "hover": "{semantic_roles.color.surface.primary}",
+      "focus": "{semantic_roles.color.surface.primary}",
+      "error": "{semantic_roles.color.status.error_background}",
+      "disabled": "{semantic_roles.color.surface.secondary}"
+    },
+    "text": {
+      "default": "{semantic_roles.color.neutral.text_primary}",
+      "placeholder": "{semantic_roles.color.neutral.text_tertiary}",
+      "disabled": "{semantic_roles.color.neutral.text_disabled}"
+    },
+    "border": {
+      "default": "{semantic_roles.color.neutral.border_default}",
+      "hover": "{semantic_roles.color.neutral.border_hover}",
+      "focus": "{semantic_roles.color.interactive.focus}",
+      "error": "{semantic_roles.color.status.error}",
+      "disabled": "{semantic_roles.color.neutral.border_disabled}"
+    },
+    "padding": {
+      "x": "{semantic_roles.spacing.role.regular}",
+      "y": "{semantic_roles.spacing.role.compact}"
+    },
+    "border_radius": "{semantic_roles.border_radius.role.rounded}",
+    "typography": {
+      "font_size": "{semantic_roles.typography.role.body.font_size}",
+      "font_weight": "{semantic_roles.typography.role.body.font_weight}",
+      "line_height": "{semantic_roles.typography.role.body.line_height}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_roles.spacing.role.compact}",
+          "y": "{semantic_roles.spacing.role.compact}"
+        },
+        "font_size": "{semantic_roles.typography.role.body_small.font_size}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_roles.spacing.role.regular}",
+          "y": "{semantic_roles.spacing.role.compact}"
+        },
+        "font_size": "{semantic_roles.typography.role.body.font_size}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_roles.spacing.role.spacious}",
+          "y": "{semantic_roles.spacing.role.regular}"
+        },
+        "font_size": "{semantic_roles.typography.role.heading.font_size}"
+      }
+    }
+  }
+}
+

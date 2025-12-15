@@ -1,0 +1,62 @@
+{
+  "table": {
+    "header": {
+      "background": {
+        "default": "{semantic_hierarchy.color.level_2.background}"
+      },
+      "text": {
+        "default": "{semantic_hierarchy.color.level_2.text}",
+        "sorted": "{semantic_hierarchy.color.level_1.action}"
+      },
+      "border": {
+        "default": "{semantic_hierarchy.color.level_2.border}"
+      }
+    },
+    "row": {
+      "background": {
+        "default": "{semantic_hierarchy.color.level_1.background}",
+        "hover": "{semantic_hierarchy.color.level_2.background}",
+        "selected": "{semantic_hierarchy.color.level_1.action}",
+        "selected_hover": "{semantic_hierarchy.color.level_1.action_hover}"
+      },
+      "text": {
+        "default": "{semantic_hierarchy.color.level_1.text}",
+        "selected": "{semantic_hierarchy.color.level_1.text}"
+      },
+      "border": {
+        "default": "{semantic_hierarchy.color.level_1.border}"
+      }
+    },
+    "cell": {
+      "padding": {
+        "x": "{semantic_hierarchy.spacing.level_2.padding}",
+        "y": "{semantic_hierarchy.spacing.level_1.padding}"
+      },
+      "text": {
+        "default": "{semantic_hierarchy.color.level_1.text}",
+        "secondary": "{semantic_hierarchy.color.level_2.text_secondary}"
+      }
+    },
+    "border": {
+      "default": "{semantic_hierarchy.color.level_1.border}",
+      "header": "{semantic_hierarchy.color.level_2.border}"
+    },
+    "typography": {
+      "header": {
+        "font_size": "{semantic_hierarchy.typography.level_3.font_size}",
+        "font_weight": "{semantic_hierarchy.typography.level_2.font_weight}",
+        "line_height": "{semantic_hierarchy.typography.level_3.line_height}"
+      },
+      "body": {
+        "font_size": "{semantic_hierarchy.typography.level_3.font_size}",
+        "font_weight": "{semantic_hierarchy.typography.level_3.font_weight}",
+        "line_height": "{semantic_hierarchy.typography.level_3.line_height}"
+      }
+    },
+    "spacing": {
+      "row_gap": "{semantic_hierarchy.spacing.level_1.gap}",
+      "cell_gap": "{semantic_hierarchy.spacing.level_1.gap}"
+    }
+  }
+}
+

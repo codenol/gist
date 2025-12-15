@@ -1,0 +1,58 @@
+{
+  "input": {
+    "background": {
+      "default": "{semantic_context.color.input.background}",
+      "hover": "{semantic_context.color.input.background}",
+      "focus": "{semantic_context.color.input.background}",
+      "error": "{semantic_context.color.input.background}",
+      "disabled": "{semantic_context.color.input.background_disabled}"
+    },
+    "text": {
+      "default": "{semantic_context.color.input.text}",
+      "placeholder": "{semantic_context.color.input.text_placeholder}",
+      "disabled": "{semantic_context.color.input.text_disabled}"
+    },
+    "border": {
+      "default": "{semantic_context.color.input.border}",
+      "hover": "{semantic_context.color.input.border_hover}",
+      "focus": "{semantic_context.color.input.border_focus}",
+      "error": "{semantic_context.color.input.border_error}",
+      "disabled": "{semantic_context.color.input.border}"
+    },
+    "padding": {
+      "x": "{semantic_context.spacing.input.padding_x}",
+      "y": "{semantic_context.spacing.input.padding_y}"
+    },
+    "gap": "{semantic_context.spacing.input.gap}",
+    "border_radius": "{semantic_context.border_radius.input}",
+    "typography": {
+      "font_size": "{semantic_context.typography.input.font_size}",
+      "font_weight": "{semantic_context.typography.input.font_weight}",
+      "line_height": "{semantic_context.typography.input.line_height}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_context.spacing.input.padding_x}",
+          "y": "{semantic_context.spacing.input.padding_y}"
+        },
+        "font_size": "{semantic_context.typography.input.font_size}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_context.spacing.input.padding_x}",
+          "y": "{semantic_context.spacing.input.padding_y}"
+        },
+        "font_size": "{semantic_context.typography.input.font_size}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_context.spacing.input.padding_x}",
+          "y": "{semantic_context.spacing.input.padding_y}"
+        },
+        "font_size": "{semantic_context.typography.input.font_size}"
+      }
+    }
+  }
+}
+
