@@ -7,7 +7,7 @@ import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 // @grafana/ui стили загружаются автоматически через компоненты
 // import '@grafana/ui/dist/index.css'; // Убрано - файл может не существовать
-import '../src/App.scss';
+// import '../src/App.scss'; // Убрано - файл не существует
 import './preview.scss';
 // Импорт tokens.scss через алиас
 import '@design-tokens/tokens.scss';

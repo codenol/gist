@@ -39,40 +39,72 @@
   - `tokens/semantic_context.json`
 - **Компонентные токены**: `tokens/component_tokens/`
 
-## Компоненты и документация.
+## Компоненты и документация
+
+Документация организована по компонентам. Для каждого компонента есть:
+- **Объединенный документ** (`README.md`) — описывает все 4 подхода, общие и различные части
+- **Отдельные документы** — детальное описание каждого подхода
 
 ### Кнопка (Button)
 
-Документация по созданию токенов для компонента "кнопка":
-
-- **[button_functional.md](component_tokens/button_functional.md)** — подход по функциональности
-- **[button_roles.md](component_tokens/button_roles.md)** — подход по ролям
-- **[button_hierarchy.md](component_tokens/button_hierarchy.md)** — подход по иерархии
-- **[button_context.md](component_tokens/button_context.md)** — подход по контексту использования
+- **[README.md](component_tokens/button/README.md)** — объединенный документ со сравнением всех подходов
+- **[functional.md](component_tokens/button/functional.md)** — подход по функциональности
+- **[roles.md](component_tokens/button/roles.md)** — подход по ролям
+- **[hierarchy.md](component_tokens/button/hierarchy.md)** — подход по иерархии
+- **[context.md](component_tokens/button/context.md)** — подход по контексту использования
 
 ### Инпут (Input)
 
-Документация по созданию токенов для компонента "инпут" (поле ввода):
-
-- **[input_functional.md](component_tokens/input_functional.md)** — подход по функциональности
-- **[input_roles.md](component_tokens/input_roles.md)** — подход по ролям
-- **[input_hierarchy.md](component_tokens/input_hierarchy.md)** — подход по иерархии
-- **[input_context.md](component_tokens/input_context.md)** — подход по контексту использования
+- **[README.md](component_tokens/input/README.md)** — объединенный документ со сравнением всех подходов
+- **[functional.md](component_tokens/input/functional.md)** — подход по функциональности
+- **[roles.md](component_tokens/input/roles.md)** — подход по ролям
+- **[hierarchy.md](component_tokens/input/hierarchy.md)** — подход по иерархии
+- **[context.md](component_tokens/input/context.md)** — подход по контексту использования
 
 ### Таблица (Table)
 
-Документация по созданию токенов для компонента "таблица":
-
-- **[table_functional.md](component_tokens/table_functional.md)** — подход по функциональности
-- **[table_roles.md](component_tokens/table_roles.md)** — подход по ролям
-- **[table_hierarchy.md](component_tokens/table_hierarchy.md)** — подход по иерархии
-- **[table_context.md](component_tokens/table_context.md)** — подход по контексту использования
+- **[README.md](component_tokens/table/README.md)** — объединенный документ со сравнением всех подходов
+- **[functional.md](component_tokens/table/functional.md)** — подход по функциональности
+- **[roles.md](component_tokens/table/roles.md)** — подход по ролям
+- **[hierarchy.md](component_tokens/table/hierarchy.md)** — подход по иерархии
+- **[context.md](component_tokens/table/context.md)** — подход по контексту использования
 
 ### Бейдж (Badge)
 
-Документация по созданию токенов для компонента "бейдж" (метка):
+- **[README.md](component_tokens/badge/README.md)** — объединенный документ со сравнением всех подходов
+- **[functional.md](component_tokens/badge/functional.md)** — подход по функциональности
+- **[roles.md](component_tokens/badge/roles.md)** — подход по ролям
+- **[hierarchy.md](component_tokens/badge/hierarchy.md)** — подход по иерархии
+- **[context.md](component_tokens/badge/context.md)** — подход по контексту использования
 
-- **[badge_functional.md](component_tokens/badge_functional.md)** — подход по функциональности
-- **[badge_roles.md](component_tokens/badge_roles.md)** — подход по ролям
-- **[badge_hierarchy.md](component_tokens/badge_hierarchy.md)** — подход по иерархии
-- **[badge_context.md](component_tokens/badge_context.md)** — подход по контексту использования
+## Структура файлов
+
+```
+docs/
+├── README.md (этот файл)
+└── component_tokens/
+    ├── button/
+    │   ├── README.md (объединенный документ)
+    │   ├── functional.md
+    │   ├── roles.md
+    │   ├── hierarchy.md
+    │   └── context.md
+    ├── input/
+    │   ├── README.md
+    │   ├── functional.md
+    │   ├── roles.md
+    │   ├── hierarchy.md
+    │   └── context.md
+    ├── table/
+    │   ├── README.md
+    │   ├── functional.md
+    │   ├── roles.md
+    │   ├── hierarchy.md
+    │   └── context.md
+    └── badge/
+        ├── README.md
+        ├── functional.md
+        ├── roles.md
+        ├── hierarchy.md
+        └── context.md
+```

@@ -85,6 +85,20 @@ const config = {
     logDebug('main.mjs:viteFinal:2', 'Setting up aliases', { grafanaSrcPath, exists: fs.existsSync(grafanaSrcPath) }, 'C');
     // #endregion
     
+    // Определяем путь к uikit-main с проверкой альтернативных локаций
+    const uikitMainPath = path.resolve(__dirname, '../uikit-main');
+    const uikitMainSkalaModules = path.resolve(__dirname, '../skala_modules/uikit-main');
+    const uikitMainSkalaModulesSpectr = path.resolve(__dirname, '../skala_modules_spectr/uikit-main');
+    
+    let resolvedUikitMain = null;
+    if (fs.existsSync(uikitMainPath)) {
+      resolvedUikitMain = uikitMainPath;
+    } else if (fs.existsSync(uikitMainSkalaModules)) {
+      resolvedUikitMain = uikitMainSkalaModules;
+    } else if (fs.existsSync(uikitMainSkalaModulesSpectr)) {
+      resolvedUikitMain = uikitMainSkalaModulesSpectr;
+    }
+    
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
       components: path.resolve(__dirname, '../src/components'),
@@ -96,49 +110,70 @@ const config = {
       store: path.resolve(__dirname, '../src/store'),
       assets: path.resolve(__dirname, '../src/assets'),
       'src': path.resolve(__dirname, '../src'),
-      'uikit-main': path.resolve(__dirname, '../uikit-main'),
       // Алиасы для Grafana компонентов
       '@grafana/ui': path.resolve(__dirname, '../node_modules/@grafana/ui'),
       // Алиас для design tokens
       '@design-tokens': path.resolve(__dirname, '../src/stories/Будущее/Design System'),
     };
     
+    // Добавляем uikit-main только если он найден
+    if (resolvedUikitMain) {
+      config.resolve.alias['uikit-main'] = resolvedUikitMain;
+    }
+    
     // Плагин для исправления путей file:// в MDX файлах
     const fixFileProtocolPlugin = () => ({
       name: 'fix-file-protocol',
       enforce: 'pre',
       resolveId(id, importer) {
-        // Убираем протокол file:// из путей
-        if (id && (id.startsWith('file://') || id.includes('file:///'))) {
-          // Убираем протокол file:///
-          let filePath = id.replace(/^file:\/\//, '').replace(/^\/+/, '');
-          
-          // На Windows пути могут иметь формат file:///C:/...
-          if (filePath.match(/^[A-Za-z]:/)) {
-            // Путь уже правильный, просто убираем лишние слеши
-            filePath = filePath.replace(/^\/+/, '');
-            return filePath;
-          }
-          
-          // Если путь содержит @storybook/addon-docs, разрешаем его правильно
-          if (id.includes('@storybook/addon-docs')) {
+        if (!id) return null;
+        
+        // Обрабатываем file:// протокол
+        if (id.includes('file://')) {
+          // Если путь содержит @storybook/addon-docs или mdx-react-shim, разрешаем его правильно
+          if (id.includes('@storybook/addon-docs') || id.includes('mdx-react-shim')) {
             try {
               const resolvedPath = require.resolve('@storybook/addon-docs/dist/mdx-react-shim.js');
               return resolvedPath;
             } catch (e) {
-              // Если не можем разрешить, возвращаем null
+              // Если не можем разрешить через require.resolve, пробуем через path
+              try {
+                const mdxShimPath = path.resolve(__dirname, '../node_modules/@storybook/addon-docs/dist/mdx-react-shim.js');
+                if (fs.existsSync(mdxShimPath)) {
+                  return mdxShimPath;
+                }
+              } catch (e2) {
+                // Игнорируем ошибки
+              }
               return null;
             }
+          }
+          
+          // Для других file:// путей убираем протокол
+          let filePath = id.replace(/^file:\/\//, '').replace(/^\/+/, '');
+          
+          // На Windows пути могут иметь формат file:///C:/...
+          if (filePath.match(/^[A-Za-z]:/)) {
+            filePath = filePath.replace(/^\/+/, '');
+            return filePath;
           }
           
           return filePath || null;
         }
         
-        // Разрешаем mdx-react-shim напрямую
-        if (id && id.includes('mdx-react-shim')) {
+        // Разрешаем mdx-react-shim напрямую (без file://)
+        if (id.includes('mdx-react-shim') || (id.includes('@storybook/addon-docs') && id.includes('mdx-react-shim'))) {
           try {
             return require.resolve('@storybook/addon-docs/dist/mdx-react-shim.js');
           } catch (e) {
+            try {
+              const mdxShimPath = path.resolve(__dirname, '../node_modules/@storybook/addon-docs/dist/mdx-react-shim.js');
+              if (fs.existsSync(mdxShimPath)) {
+                return mdxShimPath;
+              }
+            } catch (e2) {
+              // Игнорируем ошибки
+            }
             return null;
           }
         }
@@ -147,10 +182,47 @@ const config = {
       },
     });
     
-    // Плагин для исправления относительных импортов из uikit-main
+    // Плагин для обработки импортов из uikit-main
     const fixUIKitImportsPlugin = () => ({
       name: 'fix-uikit-imports',
       enforce: 'pre',
+      resolveId(id, importer) {
+        // Обрабатываем импорты из uikit-main
+        if (id && id.startsWith('uikit-main/')) {
+          // Если uikit-main не найден, пробуем найти в альтернативных локациях
+          if (!resolvedUikitMain) {
+            // Пробуем найти файл в альтернативных локациях
+            const relativePath = id.replace('uikit-main/', '');
+            const alternativePaths = [
+              path.resolve(__dirname, '../skala_modules/uikit-main', relativePath),
+              path.resolve(__dirname, '../skala_modules_spectr/uikit-main', relativePath),
+              path.resolve(__dirname, '../uikit-main', relativePath),
+            ];
+            
+            for (const altPath of alternativePaths) {
+              // Пробуем разные расширения
+              const extensions = ['', '.tsx', '.ts', '.jsx', '.js', '/index.tsx', '/index.ts', '/index.jsx', '/index.js'];
+              for (const ext of extensions) {
+                const fullPath = altPath + ext;
+                if (fs.existsSync(fullPath)) {
+                  return fullPath;
+                }
+              }
+              
+              // Для SCSS файлов
+              if (relativePath.endsWith('.scss') || relativePath.endsWith('.css')) {
+                if (fs.existsSync(altPath)) {
+                  return altPath;
+                }
+              }
+            }
+            
+            // Если не нашли, возвращаем null чтобы Vite показал ошибку
+            return null;
+          }
+        }
+        return null;
+      },
       transform(code, id) {
         // Переписываем импорты только в файлах из uikit-main
         if (id.includes('uikit-main') && (code.includes('../../helpers') || code.includes('../helpers'))) {
@@ -203,6 +275,11 @@ const config = {
     // Убеждаемся, что @mdx-js/react оптимизируется
     if (!config.optimizeDeps.include.includes('@mdx-js/react')) {
       config.optimizeDeps.include.push('@mdx-js/react');
+    }
+    
+    // Добавляем @storybook/addon-docs в оптимизацию
+    if (!config.optimizeDeps.include.includes('@storybook/addon-docs')) {
+      config.optimizeDeps.include.push('@storybook/addon-docs');
     }
     
     // #region agent log
