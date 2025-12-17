@@ -1,0 +1,57 @@
+{
+  "input": {
+    "background": {
+      "default": "{base.color.white}",
+      "hover": "{base.color.white}",
+      "focus": "{base.color.white}",
+      "error": "{base.color.red.50}",
+      "disabled": "{base.color.gray.50}"
+    },
+    "text": {
+      "default": "{base.color.gray.900}",
+      "placeholder": "{base.color.gray.500}",
+      "disabled": "{base.color.gray.400}"
+    },
+    "border": {
+      "default": "{base.color.gray.300}",
+      "hover": "{base.color.gray.400}",
+      "focus": "{base.color.blue.500}",
+      "error": "{base.color.red.500}",
+      "disabled": "{base.color.gray.300}"
+    },
+    "padding": {
+      "x": "{base.spacing.md}",
+      "y": "{base.spacing.sm}"
+    },
+    "gap": "{base.spacing.sm}",
+    "border_radius": "{base.border_radius.md}",
+    "typography": {
+      "font_size": "{base.typography.font_size.base}",
+      "font_weight": "{base.typography.font_weight.regular}",
+      "line_height": "{base.typography.line_height.normal}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{base.spacing.sm}",
+          "y": "{base.spacing.sm}"
+        },
+        "font_size": "{base.typography.font_size.sm}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{base.spacing.md}",
+          "y": "{base.spacing.sm}"
+        },
+        "font_size": "{base.typography.font_size.base}"
+      },
+      "large": {
+        "padding": {
+          "x": "{base.spacing.lg}",
+          "y": "{base.spacing.md}"
+        },
+        "font_size": "{base.typography.font_size.lg}"
+      }
+    }
+  }
+}

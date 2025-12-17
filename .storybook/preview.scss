@@ -1,0 +1,362 @@
+// Стили для переопределения фона контейнера Storybook
+// Применяем фон из CSS переменных темы
+
+// Основной контейнер preview Storybook
+.sb-show-main,
+.os-host,
+[class*="os-host"],
+[class*="storybook-preview"],
+[id*="storybook-preview"] {
+  background: var(--background-card-level-1, #ffffff) !important;
+}
+
+// Контейнер для рендеринга компонентов
+.sb-main-padded,
+[class*="sb-main-padded"],
+div[class*="story"] {
+  background: var(--background-card-level-1, #ffffff) !important;
+}
+
+// Если есть обертка с классом темы, применяем фон
+.layout-theme-dark {
+  background: var(--background-card-level-1, #1f2d40) !important;
+  
+  .sb-show-main,
+  .os-host,
+  [class*="os-host"],
+  [class*="storybook-preview"],
+  [id*="storybook-preview"],
+  .sb-main-padded,
+  [class*="sb-main-padded"],
+  div[class*="story"] {
+    background: var(--background-card-level-1, #1f2d40) !important;
+  }
+}
+
+.layout-theme-light {
+  background: var(--background-card-level-1, #ffffff) !important;
+  
+  .sb-show-main,
+  .os-host,
+  [class*="os-host"],
+  [class*="storybook-preview"],
+  [id*="storybook-preview"],
+  .sb-main-padded,
+  [class*="sb-main-padded"],
+  div[class*="story"] {
+    background: var(--background-card-level-1, #ffffff) !important;
+  }
+}
+
+// Применяем фон к body и html с классом темы
+body.layout-theme-dark,
+html.layout-theme-dark {
+  background: var(--background-card-level-1, #1f2d40) !important;
+}
+
+body.layout-theme-light,
+html.layout-theme-light {
+  background: var(--background-card-level-1, #ffffff) !important;
+}
+
+// Исправляем скроллинг в Storybook
+// Основной контейнер должен иметь скроллинг
+.sb-show-main {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+}
+
+// Контейнер документации Storybook - должен прокручиваться
+.sbdocs-wrapper {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
+// Контент документации - без ограничений по высоте
+.sbdocs-content {
+  overflow: visible !important;
+  height: auto !important;
+  min-height: 100% !important;
+}
+
+// Основной контейнер контента (os-content используется в Storybook для скроллинга)
+.os-host {
+  height: 100% !important;
+  max-height: 100vh !important;
+  
+  .os-content {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 100% !important;
+  }
+}
+
+// Убираем фиксированную высоту с контента документации
+[class*="docs-story"],
+[id*="docs-story"],
+.sb-docs-container {
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+// Убираем растягивание для всех обёрток docs-story
+[class*="docs-story"] > div,
+[id*="docs-story"] > div,
+[class*="docs-story"] > *,
+[id*="docs-story"] > * {
+  height: auto !important;
+  min-height: auto !important;
+  flex-shrink: 0 !important;
+  align-self: flex-start !important;
+  flex: 0 0 auto !important;
+}
+
+// Контейнер для stories - без ограничений, HUG по вертикали
+.sb-story {
+  overflow: visible !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  align-self: flex-start !important;
+  flex: 0 0 auto !important;
+}
+
+// Уменьшаем отступы в документации Storybook
+.sbdocs {
+  // Уменьшаем отступы между заголовками
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    
+    &:first-child {
+      margin-top: 0 !important;
+    }
+  }
+  
+  // Уменьшаем отступы между параграфами
+  p {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  // Уменьшаем отступы между списками
+  ul, ol {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  // Уменьшаем отступы между блоками кода
+  pre {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  // Уменьшаем отступы между горизонтальными разделителями
+  hr {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+// Агрессивно уменьшаем отступы между Story компонентами
+.sbdocs-content {
+  // Story компоненты и их обёртки - убираем все отступы
+  [class*="story"],
+  [id*="story"],
+  [class*="docs-story"],
+  [id*="docs-story"],
+  [data-item-id],
+  div[data-item-id],
+  [data-item-id] > div,
+  div[class*="story"] > div,
+  div[id*="story"] > div {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    flex: 0 0 auto !important;
+    align-self: flex-start !important;
+  }
+  
+  // Уменьшаем отступы между соседними Story компонентами до минимума
+  [class*="story"] + [class*="story"],
+  [id*="story"] + [id*="story"],
+  [class*="docs-story"] + [class*="docs-story"],
+  [id*="docs-story"] + [id*="docs-story"],
+  [data-item-id] + [data-item-id],
+  div[class*="story"] + div[class*="story"],
+  div[id*="story"] + div[id*="story"] {
+    margin-top: 0.25rem !important;
+  }
+  
+  // Уменьшаем отступы после заголовков перед Story
+  h1 + div,
+  h2 + div,
+  h3 + div,
+  h4 + div {
+    margin-top: 0.5rem !important;
+    
+    &[class*="story"],
+    &[id*="story"] {
+      margin-top: 0.25rem !important;
+    }
+  }
+  
+  // Уменьшаем отступы после параграфов перед Story
+  p + div[class*="story"],
+  p + div[id*="story"] {
+    margin-top: 0.25rem !important;
+  }
+  
+  // Уменьшаем отступы между всеми div элементами (кроме заголовков)
+  > div:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+    
+    &:first-child {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+// Глобальные правила для уменьшения отступов в документации
+.sbdocs-wrapper {
+  // Уменьшаем отступы между элементами
+  > div {
+    margin-bottom: 0.5rem !important;
+    
+    // Story компоненты без отступов
+    [class*="story"],
+    [id*="story"] {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+// Максимально агрессивное уменьшение отступов между Story компонентами
+// Нацеливаемся на все возможные обёртки, которые Storybook использует
+.sbdocs-content,
+.sbdocs-wrapper {
+  // Убираем все отступы у любых элементов, связанных со Story
+  [class*="story"],
+  [id*="story"],
+  [data-item-id],
+  [data-item-id] > *,
+  div[class*="story"],
+  div[id*="story"],
+  section[class*="story"],
+  article[class*="story"] {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  // Минимальные отступы между соседними Story компонентами
+  [class*="story"] + [class*="story"],
+  [id*="story"] + [id*="story"],
+  [data-item-id] + [data-item-id] {
+    margin-top: 0.25rem !important;
+  }
+  
+  // Убираем отступы у всех промежуточных обёрток
+  div > div[class*="story"],
+  div > div[id*="story"],
+  div > div[data-item-id],
+  [class*="story"] > div,
+  [id*="story"] > div {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+// Универсальное правило - убираем большие отступы между всеми элементами
+.sbdocs-content > * + * {
+  margin-top: 0.5rem !important;
+  
+  // Story компоненты - минимальные отступы
+  &[class*="story"],
+  &[id*="story"],
+  &[data-item-id] {
+    margin-top: 0.25rem !important;
+  }
+}
+
+// HUG по вертикали - убираем растягивание story контейнеров
+// Конкретный элемент
+#story--components-data-display-statusbadge--with-severity-inner {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  flex-shrink: 0 !important;
+  flex: 0 0 auto !important;
+  align-self: flex-start !important;
+}
+
+// Все story контейнеры с -inner
+[id*="story--"][id*="-inner"] {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: fit-content !important;
+  flex: 0 0 auto !important;
+  align-self: flex-start !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+// Дочерние элементы story контейнеров
+[id*="story--"][id*="-inner"] > div,
+[id*="story--"][id*="-inner"] > * {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  flex-shrink: 0 !important;
+}
+
+// Убираем растягивание для story контейнеров в документации
+.sbdocs-content [id*="story--"][id*="-inner"],
+.sbdocs-wrapper [id*="story--"][id*="-inner"] {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: fit-content !important;
+  align-self: flex-start !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+}
+
+// Убираем растягивание для всех обёрток story
+[class*="docs-story"] [id*="-inner"],
+[id*="docs-story"] [id*="-inner"] {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: fit-content !important;
+}
+
+// Родительские контейнеры не должны растягивать дочерние элементы
+.sbdocs-content,
+.sbdocs-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  
+  > * {
+    flex: 0 0 auto !important;
+    align-self: flex-start !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+}
+
+

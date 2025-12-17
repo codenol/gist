@@ -1,0 +1,61 @@
+{
+  "table": {
+    "header": {
+      "background": {
+        "default": "{base.color.gray.50}"
+      },
+      "text": {
+        "default": "{base.color.gray.900}",
+        "sorted": "{base.color.blue.500}"
+      },
+      "border": {
+        "default": "{base.color.gray.300}"
+      }
+    },
+    "row": {
+      "background": {
+        "default": "{base.color.white}",
+        "hover": "{base.color.gray.50}",
+        "selected": "{base.color.blue.500}",
+        "selected_hover": "{base.color.blue.600}"
+      },
+      "text": {
+        "default": "{base.color.gray.900}",
+        "selected": "{base.color.white}"
+      },
+      "border": {
+        "default": "{base.color.gray.200}"
+      }
+    },
+    "cell": {
+      "padding": {
+        "x": "{base.spacing.md}",
+        "y": "{base.spacing.sm}"
+      },
+      "text": {
+        "default": "{base.color.gray.900}",
+        "secondary": "{base.color.gray.600}"
+      }
+    },
+    "border": {
+      "default": "{base.color.gray.200}",
+      "header": "{base.color.gray.300}"
+    },
+    "typography": {
+      "header": {
+        "font_size": "{base.typography.font_size.base}",
+        "font_weight": "{base.typography.font_weight.medium}",
+        "line_height": "{base.typography.line_height.normal}"
+      },
+      "body": {
+        "font_size": "{base.typography.font_size.base}",
+        "font_weight": "{base.typography.font_weight.regular}",
+        "line_height": "{base.typography.line_height.normal}"
+      }
+    },
+    "spacing": {
+      "row_gap": "{base.spacing.xs}",
+      "cell_gap": "{base.spacing.sm}"
+    }
+  }
+}

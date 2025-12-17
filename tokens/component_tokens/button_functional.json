@@ -1,0 +1,75 @@
+{
+  "button": {
+    "primary": {
+      "background": {
+        "default": "{semantic_functional.color.action.primary}",
+        "hover": "{semantic_functional.color.action.primary_hover}",
+        "active": "{semantic_functional.color.action.primary_active}",
+        "disabled": "{semantic_functional.color.text.disabled}"
+      },
+      "text": {
+        "default": "{semantic_functional.color.text.inverse}",
+        "disabled": "{semantic_functional.color.text.disabled}"
+      },
+      "border": {
+        "default": "{semantic_functional.color.action.primary}",
+        "disabled": "{semantic_functional.color.border.disabled}"
+      }
+    },
+    "secondary": {
+      "background": {
+        "default": "{semantic_functional.color.background.secondary}",
+        "hover": "{semantic_functional.color.background.tertiary}",
+        "active": "{semantic_functional.color.background.tertiary}",
+        "disabled": "{semantic_functional.color.background.secondary}"
+      },
+      "text": {
+        "default": "{semantic_functional.color.text.primary}",
+        "disabled": "{semantic_functional.color.text.disabled}"
+      },
+      "border": {
+        "default": "{semantic_functional.color.border.default}",
+        "disabled": "{semantic_functional.color.border.disabled}"
+      }
+    },
+    "padding": {
+      "x": "{semantic_functional.spacing.padding.medium}",
+      "y": "{semantic_functional.spacing.padding.small}"
+    },
+    "gap": "{semantic_functional.spacing.gap.small}",
+    "border_radius": "{semantic_functional.border_radius.medium}",
+    "typography": {
+      "font_size": "{semantic_functional.typography.font_size.body}",
+      "font_weight": "{semantic_functional.typography.font_weight.body_emphasis}",
+      "line_height": "{semantic_functional.typography.line_height.body}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_functional.spacing.padding.small}",
+          "y": "{semantic_functional.spacing.padding.small}"
+        },
+        "font_size": "{semantic_functional.typography.font_size.body_small}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_functional.spacing.padding.medium}",
+          "y": "{semantic_functional.spacing.padding.small}"
+        },
+        "font_size": "{semantic_functional.typography.font_size.body}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_functional.spacing.padding.large}",
+          "y": "{semantic_functional.spacing.padding.medium}"
+        },
+        "font_size": "{semantic_functional.typography.font_size.heading_small}"
+      }
+    },
+    "shadow": {
+      "default": "{semantic_functional.shadow.small}",
+      "hover": "{semantic_functional.shadow.medium}"
+    }
+  }
+}
+

@@ -1,0 +1,75 @@
+{
+  "button": {
+    "primary": {
+      "background": {
+        "default": "{semantic_hierarchy.color.level_1.action}",
+        "hover": "{semantic_hierarchy.color.level_1.action_hover}",
+        "active": "{semantic_hierarchy.color.level_1.action_active}",
+        "disabled": "{semantic_hierarchy.color.level_3.text_secondary}"
+      },
+      "text": {
+        "default": "{semantic_hierarchy.color.level_1.text}",
+        "disabled": "{semantic_hierarchy.color.level_3.text_secondary}"
+      },
+      "border": {
+        "default": "{semantic_hierarchy.color.level_1.border}",
+        "disabled": "{semantic_hierarchy.color.level_3.border}"
+      }
+    },
+    "secondary": {
+      "background": {
+        "default": "{semantic_hierarchy.color.level_2.background}",
+        "hover": "{semantic_hierarchy.color.level_3.background}",
+        "active": "{semantic_hierarchy.color.level_3.background}",
+        "disabled": "{semantic_hierarchy.color.level_2.background}"
+      },
+      "text": {
+        "default": "{semantic_hierarchy.color.level_2.text}",
+        "disabled": "{semantic_hierarchy.color.level_3.text_secondary}"
+      },
+      "border": {
+        "default": "{semantic_hierarchy.color.level_2.border}",
+        "disabled": "{semantic_hierarchy.color.level_3.border}"
+      }
+    },
+    "padding": {
+      "x": "{semantic_hierarchy.spacing.level_2.padding}",
+      "y": "{semantic_hierarchy.spacing.level_1.padding}"
+    },
+    "gap": "{semantic_hierarchy.spacing.level_1.gap}",
+    "border_radius": "{semantic_hierarchy.border_radius.level_2}",
+    "typography": {
+      "font_size": "{semantic_hierarchy.typography.level_3.font_size}",
+      "font_weight": "{semantic_hierarchy.typography.level_3.font_weight}",
+      "line_height": "{semantic_hierarchy.typography.level_3.line_height}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{semantic_hierarchy.spacing.level_1.padding}",
+          "y": "{semantic_hierarchy.spacing.level_1.padding}"
+        },
+        "font_size": "{semantic_hierarchy.typography.body_small.font_size}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{semantic_hierarchy.spacing.level_2.padding}",
+          "y": "{semantic_hierarchy.spacing.level_1.padding}"
+        },
+        "font_size": "{semantic_hierarchy.typography.level_3.font_size}"
+      },
+      "large": {
+        "padding": {
+          "x": "{semantic_hierarchy.spacing.level_3.padding}",
+          "y": "{semantic_hierarchy.spacing.level_2.padding}"
+        },
+        "font_size": "{semantic_hierarchy.typography.level_2.font_size}"
+      }
+    },
+    "shadow": {
+      "default": "{semantic_hierarchy.shadow.level_1}",
+      "hover": "{semantic_hierarchy.shadow.level_2}"
+    }
+  }
+}
+

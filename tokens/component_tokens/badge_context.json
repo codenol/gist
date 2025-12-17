@@ -1,0 +1,64 @@
+{
+  "badge": {
+    "variant": {
+      "success": {
+        "background": "{base.color.green.50}",
+        "text": "{base.color.green.900}",
+        "border": "{base.color.green.500}"
+      },
+      "error": {
+        "background": "{base.color.red.50}",
+        "text": "{base.color.red.900}",
+        "border": "{base.color.red.500}"
+      },
+      "warning": {
+        "background": "{base.color.yellow.50}",
+        "text": "{base.color.yellow.900}",
+        "border": "{base.color.yellow.500}"
+      },
+      "info": {
+        "background": "{base.color.blue.500}",
+        "text": "{base.color.white}",
+        "border": "{base.color.blue.500}"
+      },
+      "neutral": {
+        "background": "{base.color.gray.100}",
+        "text": "{base.color.gray.900}",
+        "border": "{base.color.gray.300}"
+      }
+    },
+    "padding": {
+      "x": "{base.spacing.sm}",
+      "y": "{base.spacing.sm}"
+    },
+    "border_radius": "{base.border_radius.full}",
+    "typography": {
+      "font_size": "{base.typography.font_size.sm}",
+      "font_weight": "{base.typography.font_weight.medium}",
+      "line_height": "{base.typography.line_height.normal}"
+    },
+    "size": {
+      "small": {
+        "padding": {
+          "x": "{base.spacing.sm}",
+          "y": "{base.spacing.sm}"
+        },
+        "font_size": "{base.typography.font_size.xs}"
+      },
+      "medium": {
+        "padding": {
+          "x": "{base.spacing.sm}",
+          "y": "{base.spacing.sm}"
+        },
+        "font_size": "{base.typography.font_size.sm}"
+      },
+      "large": {
+        "padding": {
+          "x": "{base.spacing.md}",
+          "y": "{base.spacing.sm}"
+        },
+        "font_size": "{base.typography.font_size.base}"
+      }
+    }
+  }
+}
